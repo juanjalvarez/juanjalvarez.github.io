@@ -1,0 +1,23 @@
+.paragraph-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.paragraph-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.paragraph-content {
+  text-align: justify;
+}
+
+.paragraph-content > div {
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+.paragraph-content > div:last-child {
+  margin-bottom: 0px;
+}

@@ -1,20 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { HashRouter as Router, Route } from 'react-router-dom'
 
-import NavBar from './NavBar'
-import Main from './Main'
-import Bio from './Bio'
-
-import './index.css'
+import App from './App'
 
 ReactDOM.render(
-  <Router>
-    <div className="root-container">
-      <NavBar />
-      <Route exact path="/" component={Main} />
-      <Route path="/bio" component={Bio} />
-    </div>
-  </Router>,
+  <App />,
   document.getElementById('root')
 )

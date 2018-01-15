@@ -77,12 +77,17 @@
 
   .navbar-responsive {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0px;
+    left: 0px;
     background-color: black;
     flex-direction: column;
     width: 100%;
     height: 100%;
+  }
+
+  _::-webkit-full-page-media, _:future, :root .navbar-responsive {
+    position: fixed;
   }
 
   .navbar-responsive > .navbar-link:first-child > .navbar-item {

@@ -12,9 +12,13 @@ export default class NavBar extends Component {
 
   handleToggleMenu = () => {
     const { isOpen } = this.state
+    const { handleToggle } = this.props
     this.setState({
       isOpen: !isOpen
     })
+    if (handleToggle) {
+      handleToggle(!isOpen)
+    }
   }
   
   render() {
