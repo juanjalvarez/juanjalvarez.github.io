@@ -1,4 +1,11 @@
-.rootContainer {
+.root-container {
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .root-container {
+    padding-top: 50px;
+  }
 }
