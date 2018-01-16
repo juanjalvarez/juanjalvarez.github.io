@@ -1,7 +1,6 @@
 .job-container {
   display: flex;
   flex-direction: column;
-  flex: 1;
   min-width: 280px;
   max-width: 400px;
 }

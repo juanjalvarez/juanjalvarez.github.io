@@ -1,25 +1,15 @@
 .app-container {
-  display: flex;
-  flex-direction: column;
   height: 100%;
   align-items: center;
 }
 
 .app-container > * {
   max-width: 900px;
-}
-
-.app-container > *:last-child {
-  margin-top: 30px;
   padding-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .app-noscroll {
   overflow: hidden;
-}
-
-@media screen and (max-width: 600px) {
-  .app-container > *:last-child {
-    margin-top: 0px;
-  }
 }

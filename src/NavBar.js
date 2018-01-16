@@ -22,7 +22,9 @@ export default class NavBar extends Component {
   }
 
   triggerClose = () => {
-    this.handleToggleMenu(false)
+    if (this.state.isOpen) {
+      this.handleToggleMenu(false)
+    }
   }
   
   render() {
