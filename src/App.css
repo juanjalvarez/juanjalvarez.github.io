@@ -19,10 +19,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .app-container {
-    padding-top: 50px;
-  }
-
   .app-container > *:last-child {
     margin-top: 0px;
   }

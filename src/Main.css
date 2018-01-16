@@ -38,6 +38,7 @@
 .main-face {
   display: none;
   margin-bottom: 30px;
+  width: 200px;
 }
 
 @media screen and (max-width: 600px) {

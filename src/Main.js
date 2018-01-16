@@ -10,9 +10,9 @@ export default class Main extends Component {
   }
 
   queue = [
-    "I am primarily a frontend engineer",
-    "I am also, a backend engineer",
-    "I guess you could call me, a fullstack engineer..."
+    "I'm a frontend engineer",
+    "I am currently reinforcing my backend knowledge",
+    "Becoming a full-stack engineer is my goal"
   ]
 
   constructor() {
