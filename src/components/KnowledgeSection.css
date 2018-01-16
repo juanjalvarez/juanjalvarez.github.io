@@ -1,0 +1,23 @@
+.knowledge-section-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.knowledge-section-bar {
+  content: "";
+  background-color: rgb(69, 185, 69);
+  width: 10px;
+  margin-right: 30px;
+}
+
+.knowledge-section-yellow {
+  background-color: rgb(221, 221, 99);
+}
+
+.knowledge-section-content > * {
+  margin-bottom: 20px;
+}
+
+.knowledge-section-content > *:last-child {
+  margin-bottom: 0px;
+}

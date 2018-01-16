@@ -1,0 +1,22 @@
+.knowledge-item-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.knowledge-item-img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.knowledge-item-text {
+  margin-left: 10px;
+}
+
+.knowledge-item-title {
+  font-size: 24px;
+}
+
+.knowledge-item-description {
+  text-align: justify;
+  margin-right: 10px;
+}

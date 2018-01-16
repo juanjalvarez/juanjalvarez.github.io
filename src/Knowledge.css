@@ -1,0 +1,7 @@
+.projects {
+  align-items: center;
+}
+
+.projects > *:last-child {
+  margin-top: 20px;
+}

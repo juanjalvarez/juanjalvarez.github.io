@@ -1,11 +1,13 @@
 import React from 'react'
 
 import Job from './components/Job'
+import ResponsiveTitle from './components/ResponsiveTitle'
 
 import './Experience.css'
 
 export default () => (
   <div className="experience-list">
+    <ResponsiveTitle>Experience</ResponsiveTitle>
     <Job
       name="CareLinx"
       location="San Fransisco, CA"

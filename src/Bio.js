@@ -1,9 +1,11 @@
 import React from 'react'
 
 import Paragraph from './components/Paragraph'
+import ResponsiveTitle from './components/ResponsiveTitle'
 
 export default () => (
   <div>
+    <ResponsiveTitle>Bio</ResponsiveTitle>
     <Paragraph title="Quick Intro">
       I’m a fast learner with a passion for software development. I’ve been programming since age 14 and amongst my achievements are winning various programming competitions, numerous internships (research & industry) and I even gave a cybersecurity presentation at an IEEE conference.
     </Paragraph>

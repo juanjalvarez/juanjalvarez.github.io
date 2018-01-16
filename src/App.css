@@ -9,6 +9,11 @@
   max-width: 900px;
 }
 
+.app-container > *:last-child {
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
 .app-noscroll {
   overflow: hidden;
 }
@@ -16,5 +21,9 @@
 @media screen and (max-width: 600px) {
   .app-container {
     padding-top: 50px;
+  }
+
+  .app-container > *:last-child {
+    margin-top: 0px;
   }
 }

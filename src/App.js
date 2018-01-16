@@ -5,6 +5,7 @@ import NavBar from './NavBar'
 import Main from './Main'
 import Bio from './Bio'
 import Experience from './Experience'
+import Knowledge from './Knowledge'
 
 import './App.css'
 
@@ -30,6 +31,7 @@ export default class App extends Component {
           <Route exact path="/" component={Main} />
           <Route path="/bio" component={Bio} />
           <Route path="/experience" component={Experience} />
+          <Route path="/knowledge" component={Knowledge} />
         </div>
       </Router>
     )
