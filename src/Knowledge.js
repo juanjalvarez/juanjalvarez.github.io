@@ -3,6 +3,7 @@ import React from 'react'
 import KnowledgeSection from './components/KnowledgeSection'
 import KnowledgeItem from './components/KnowledgeItem'
 import ResponsiveTitle from './components/ResponsiveTitle'
+import Spacer from './components/Spacer'
 
 import './Knowledge.css'
 
@@ -23,5 +24,6 @@ export default () => (
       <KnowledgeItem title="Docker" img="images/docker_logo.png">I’ve been using docker to deploy services on my home server ever since early 2017. While I am interested in solidifying my knowledge creating my own containers, docker-compose and swarm orchestration, no project have come up where it would greatly benefit from containerization.</KnowledgeItem>
       <KnowledgeItem title="Java" img="images/java_logo.png">Java is the first programming language I learned, it is also the primary programming language used at my university. I’ve never professionally worked with Java but I’ve worked on many small projects using it.</KnowledgeItem>
     </KnowledgeSection>
+    <Spacer />
   </div>
 )

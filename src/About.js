@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Paragraph from './components/Paragraph'
 import ResponsiveTitle from './components/ResponsiveTitle'
+import Spacer from './components/Spacer'
 
 import './About.css'
 
@@ -59,6 +60,7 @@ export default class About extends Component {
               Show Bio
             </span>
           }
+          <Spacer />
       </div>
     )
   }

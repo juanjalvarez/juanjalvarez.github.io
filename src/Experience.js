@@ -2,6 +2,7 @@ import React from 'react'
 
 import Job from './components/Job'
 import ResponsiveTitle from './components/ResponsiveTitle'
+import Spacer from './components/Spacer'
 
 import './Experience.css'
 
@@ -37,5 +38,6 @@ export default () => (
     >
       In the spring of 2016 I was accepted into my first ever internship experience. I was to conduct NSF-funded research at the University of South Florida during the summer. During this research experience I collaborated with Dr. Florina Almenares and Dr. Miguel Labrador to write our research paper titled “An Accurate Way To Cross Reference Users Across Social Networks”, which was later published and presented at an IEEE conference.
     </Job>
+    <Spacer />
   </div>
 )
