@@ -41,7 +41,7 @@ export default class About extends Component {
   render() {
     return (
       <div className="about-container">
-        <ResponsiveTitle>Bio</ResponsiveTitle>
+        <ResponsiveTitle>About</ResponsiveTitle>
         <Paragraph title="Quick Intro">
           I’m a fast learner with a passion for software development. I’ve been programming since age 14 and amongst my achievements are winning various programming competitions, numerous internships (research & industry) and I even gave a cybersecurity presentation at an IEEE conference.
         </Paragraph>
