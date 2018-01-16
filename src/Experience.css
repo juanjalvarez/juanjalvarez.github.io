@@ -1,0 +1,10 @@
+.experience-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.experience-list > .job-container {
+  margin: 20px;
+}

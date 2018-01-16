@@ -20,6 +20,10 @@ export default class NavBar extends Component {
       handleToggle(!isOpen)
     }
   }
+
+  triggerClose = () => {
+    this.handleToggleMenu(false)
+  }
   
   render() {
     const { isOpen } = this.state
@@ -37,23 +41,24 @@ export default class NavBar extends Component {
           <img
             src="images/face.jpg"
             className="navbar-face-img"
+            alt=""
           />
           <div className="navbar-name">Juan J. Alvarez</div>
         </div>
         <div className={`navbar-list ${isOpen ? 'navbar-responsive' : ''}`}>
-          <Link to="/bio" className="navbar-link">
+          <Link to="/bio" className="navbar-link" onClick={this.triggerClose}>
             <div className="navbar-item">Bio</div>
           </Link>
-          <Link to="/experience" className="navbar-link">
+          <Link to="/experience" className="navbar-link" onClick={this.triggerClose}>
             <div className="navbar-item">Experience</div>
           </Link>
-          <Link to="/projects" className="navbar-link">
+          <Link to="/projects" className="navbar-link" onClick={this.triggerClose}>
             <div className="navbar-item">Projects</div>
           </Link>
-          <Link to="/knowledge" className="navbar-link">
+          <Link to="/knowledge" className="navbar-link" onClick={this.triggerClose}>
             <div className="navbar-item">Knowledge</div>
           </Link>
-          <Link to="/contact" className="navbar-link">
+          <Link to="/contact" className="navbar-link" onClick={this.triggerClose}>
             <div className="navbar-item">Contact</div>
           </Link>
         </div>

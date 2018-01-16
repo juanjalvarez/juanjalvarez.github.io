@@ -4,6 +4,7 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 import NavBar from './NavBar'
 import Main from './Main'
 import Bio from './Bio'
+import Experience from './Experience'
 
 import './App.css'
 
@@ -28,6 +29,7 @@ export default class App extends Component {
           <NavBar handleToggle={this.handleNavToggle} />
           <Route exact path="/" component={Main} />
           <Route path="/bio" component={Bio} />
+          <Route path="/experience" component={Experience} />
         </div>
       </Router>
     )

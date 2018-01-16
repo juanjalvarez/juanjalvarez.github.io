@@ -74,6 +74,7 @@ export default class Main extends Component {
         <img
           src="images/face.jpg"
           className="navbar-face-img main-face"
+          alt=""
         />
         <div className="main-dynamic">{this.state.text}</div>
         <Link to="/bio" className="main-button">Get To Know Me</Link>
