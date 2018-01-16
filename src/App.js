@@ -3,7 +3,7 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 
 import NavBar from './NavBar'
 import Main from './Main'
-import Bio from './Bio'
+import About from './About'
 import Experience from './Experience'
 import Knowledge from './Knowledge'
 
@@ -29,7 +29,7 @@ export default class App extends Component {
         <div className={`app-container ${navOpen ? 'app-noscroll' : ''}`}>
           <NavBar handleToggle={this.handleNavToggle} />
           <Route exact path="/" component={Main} />
-          <Route path="/bio" component={Bio} />
+          <Route path="/about" component={About} />
           <Route path="/experience" component={Experience} />
           <Route path="/knowledge" component={Knowledge} />
         </div>

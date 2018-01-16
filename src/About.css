@@ -1,0 +1,9 @@
+.about-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.about-showbio {
+  color: #00B4FF;
+  cursor: pointer;
+}

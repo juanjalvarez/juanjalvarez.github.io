@@ -46,8 +46,8 @@ export default class NavBar extends Component {
           <div className="navbar-name">Juan J. Alvarez</div>
         </div>
         <div className={`navbar-list ${isOpen ? 'navbar-responsive' : ''}`}>
-          <Link to="/bio" className="navbar-link" onClick={this.triggerClose}>
-            <div className="navbar-item">Bio</div>
+          <Link to="/about" className="navbar-link" onClick={this.triggerClose}>
+            <div className="navbar-item">About</div>
           </Link>
           <Link to="/experience" className="navbar-link" onClick={this.triggerClose}>
             <div className="navbar-item">Experience</div>

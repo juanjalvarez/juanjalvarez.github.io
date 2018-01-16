@@ -77,7 +77,7 @@ export default class Main extends Component {
           alt=""
         />
         <div className="main-dynamic">{this.state.text}</div>
-        <Link to="/bio" className="main-button">Get To Know Me</Link>
+        <Link to="/about" className="main-button">Get To Know Me</Link>
       </div>
     )
   }
