@@ -11,7 +11,7 @@ export default () => (
     <ResponsiveTitle>Experience</ResponsiveTitle>
     <Job
       name="CareLinx"
-      location="San Fransisco, CA"
+      location="San Francisco, CA"
       img="images/carelinx_logo.png"
     >
       At CareLinx I was originally taken on as an intern, but after quickly proving myself I was contracted as a frontend engineer. I primarily worked with React and Redux and other smaller libraries. I worked from purely aesthetic components all the way to payment processing components.
