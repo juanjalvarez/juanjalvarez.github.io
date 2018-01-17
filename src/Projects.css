@@ -1,0 +1,15 @@
+.projects-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.projects-list > * {
+  margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .projects-list {
+    margin-top: 50px;
+  }
+}

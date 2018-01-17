@@ -6,6 +6,7 @@ import Main from './Main'
 import About from './About'
 import Experience from './Experience'
 import Knowledge from './Knowledge'
+import Projects from './Projects'
 
 import './App.css'
 
@@ -32,6 +33,7 @@ export default class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/experience" component={Experience} />
           <Route path="/knowledge" component={Knowledge} />
+          <Route path="/projects" component={Projects} />
         </div>
       </Router>
     )
