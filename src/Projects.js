@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Project from './components/Project'
-import Tag from './components/Tag'
 import Spacer from './components/Spacer'
 
 import * as tags from './components/Tags'
@@ -9,7 +8,15 @@ import * as tags from './components/Tags'
 import './Projects.css'
 
 export default () => (
-  <div>
+  <div className="projects-container">
+    <a className="projects-github" href="https://github.com/juanjalvarez/" target="_blank">
+      <img
+        alt=""
+        src="images/github_logo.png"
+        className="projects-github-img"
+      />
+      <span className="projects-github-text">GitHub</span>
+    </a>
     <div className="projects-list">
       <Project
         name="PuertoRicoOnline"

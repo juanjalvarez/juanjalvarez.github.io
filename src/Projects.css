@@ -1,3 +1,27 @@
+.projects-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.projects-github {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.projects-github-text {
+  font-size: 32px;
+}
+
+.projects-github-img {
+  height: 75px;
+}
+
 .projects-list {
   display: flex;
   flex-direction: row;
@@ -8,10 +32,4 @@
   margin: 10px;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media screen and (max-width: 600px) {
-  .projects-list {
-    margin-top: 50px;
-  }
 }
