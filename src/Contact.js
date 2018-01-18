@@ -5,6 +5,7 @@ import './Contact.css'
 export default () => (
   <div className="contact-container">
     <a
+      href="mailto:jalvarez5241997@gmail.com"
       target="_blank"
     >
       <img
@@ -14,6 +15,7 @@ export default () => (
       />
     </a>
     <a
+      href="https://www.linkedin.com/in/juanjalvarez97/"
       target="_blank"
     >
       <img
@@ -23,6 +25,7 @@ export default () => (
       />
     </a>
     <a
+      href="https://twitter.com/juanjalvarez524"
       target="_blank"
     >
       <img
