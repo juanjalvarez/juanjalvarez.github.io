@@ -10,7 +10,7 @@ export default class Main extends Component {
   }
 
   queue = [
-    "I'm primarily frontend developer",
+    "I'm primarily a frontend developer",
     "I am currently expanding my backend knowledge",
     "My goal is to become an experienced full-stack developer"
   ]
