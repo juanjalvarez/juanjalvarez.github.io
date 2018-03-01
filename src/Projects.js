@@ -9,7 +9,12 @@ import './Projects.css'
 
 export default () => (
   <div className="projects-container">
-    <a className="projects-github" href="https://github.com/juanjalvarez/" target="_blank">
+    <a
+      className="projects-github"
+      href="https://github.com/juanjalvarez/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img
         alt=""
         src="images/github_logo.png"
@@ -65,6 +70,15 @@ export default () => (
         ]}
       >
         AnonChat is an authentication-less anonymous messaging platform written in Go and React. AnonChat isn’t meant to go anywhere, it is basically just a playground intended to be over-engineered for learning/experience purposes. With time more features and improvements will be added like photo sharing, docker containers, redux (wasn’t added originally because I didn’t intend on the app becoming larger).
+      </Project>
+      <Project
+        name="ReBalance"
+        tags={[
+          tags.GoLang
+        ]}
+        isPrivate
+      >
+        ReBalance is a work-in-progress unRAID OS plugin for balancing data quantitatively across storage devices. This is my solution to adding new drives to a data pool that already has data, it automatically balances the data across all of the drives.
       </Project>
     </div>
     <Spacer />

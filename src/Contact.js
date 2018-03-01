@@ -7,6 +7,7 @@ export default () => (
     <a
       href="mailto:jalvarez5241997@gmail.com"
       target="_blank"
+      rel="noopener noreferrer"
     >
       <img
         alt=""
@@ -17,6 +18,7 @@ export default () => (
     <a
       href="https://www.linkedin.com/in/juanjalvarez97/"
       target="_blank"
+      rel="noopener noreferrer"
     >
       <img
         alt=""
@@ -27,6 +29,7 @@ export default () => (
     <a
       href="https://twitter.com/juanjalvarez524"
       target="_blank"
+      rel="noopener noreferrer"
     >
       <img
         alt=""

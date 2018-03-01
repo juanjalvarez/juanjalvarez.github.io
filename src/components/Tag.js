@@ -7,6 +7,7 @@ export default ({ url, children }) => (
     href={url}
     target="_blank"
     className="tag-link"
+    rel="noopener noreferrer"
   >
     #{children}
   </a>

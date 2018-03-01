@@ -44,10 +44,10 @@ export default class About extends Component {
       <div className="about-container">
         <ResponsiveTitle>About</ResponsiveTitle>
         <Paragraph title="Quick Intro">
-          I’m a fast learner with a passion for software development. I’ve been programming since age 14 and amongst my achievements are winning various programming competitions, numerous internships (research & industry) and I even gave a cybersecurity presentation at an IEEE conference.
+          I’m a fast learner with a passion for software development. I’ve been programming since age 14 and amongst my achievements are winning various programming competitions, numerous internships (both in research and industry) and I even gave a cybersecurity presentation at an IEEE conference.
         </Paragraph>
         <Paragraph title="About Me">
-          I have two dogs (Jellybean & Jaruby), my car is a black Mitsubishi Lancer and I love video games (Right now I mostly play PUBG, I have a soft spot for survival based games). My favorite color is black (I bet you didn’t see that one coming), I love Papa John’s pizza, fruit smoothies and anything and everything avocadoes. My immediate-future dream car is a Ford Mustang V6, and a little farther out I would like to have a Tesla Model-S equivalent of the future, not that I’m a car guy I just like things that go fast. Speaking of fast, I am a fan of rollercoasters, my favorite rollercoaster is the Rock ’n’ Roller Coaster from Hollywood Studios at Disney, the take-off is completely ridiculous.
+          I have two dogs, my car is a black Mitsubishi Lancer and I love video games. My favorite color is black (I bet you didn’t see that one coming), I love Papa John’s pizza, fruit smoothies and anything and everything avocadoes. I am a fan of rollercoasters, my favorite being the Rock’n Roller Coaster from Hollywood Studios at Disney.
         </Paragraph>
         {
           this.state.showBio ?
