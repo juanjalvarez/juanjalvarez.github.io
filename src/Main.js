@@ -10,9 +10,12 @@ export default class Main extends Component {
   }
 
   queue = [
-    "I'm primarily a frontend developer",
-    "I am currently expanding my backend knowledge",
-    "My goal is to become an experienced full-stack developer"
+    'Hello!',
+    'I\'m Juan...',
+    'I\'m primarily a frontend developer',
+    'I love to learn',
+    'I\'m always taking a Udemy course',
+    'My current goal is to become an experienced full-stack engineer'
   ]
 
   constructor() {
