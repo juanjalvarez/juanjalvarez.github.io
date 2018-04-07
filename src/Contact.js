@@ -26,7 +26,7 @@ export default () => (
         className="contact-img"
       />
     </a>
-    <a
+    {/* <a
       href="https://twitter.com/juanjalvarez524"
       target="_blank"
       rel="noopener noreferrer"
@@ -36,6 +36,6 @@ export default () => (
         src="images/twitter_logo.png"
         className="contact-img"
       />
-    </a>
+    </a> */}
   </div>
 )
