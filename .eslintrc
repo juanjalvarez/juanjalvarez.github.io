@@ -1,0 +1,109 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+        "react"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 7,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "modules": true,
+            "jsx": true
+        }
+    },
+    "rules": {
+        "strict": 0,
+        "no-cond-assign": [
+            "error",
+            "always"
+        ],
+        "no-dupe-args": "error",
+        "no-dupe-keys": "error",
+        "no-duplicate-case": "error",
+        "no-empty": "error",
+        "no-ex-assign": "error",
+        "no-extra-boolean-cast": "error",
+        "semi": [
+            "error",
+            "never"
+        ],
+        "no-await-in-loop": "error",
+        "no-irregular-whitespace": "error",
+        "no-template-curly-in-string": "error",
+        "use-isnan": "error",
+        "array-callback-return": "error",
+        "no-var": "error",
+        "block-scoped-var": "error",
+        "curly": "error",
+        "default-case": "error",
+        "camelcase": "error",
+        "eqeqeq": "error",
+        "no-alert": "error",
+        "no-else-return": "error",
+        "no-empty-function": "error",
+        "no-empty-pattern": "error",
+        "no-eval": "error",
+        "no-extra-bind": "error",
+        "no-extra-label": "error",
+        "no-fallthrough": "error",
+        "no-floating-decimal": "error",
+        "no-global-assign": "error",
+        "no-loop-func": "error",
+        "no-multi-spaces": "error",
+        "no-multi-str": "error",
+        "no-new": "error",
+        "no-new-func": "error",
+        "no-new-wrappers": "error",
+        "no-param-reassign": "error",
+        "no-proto": "error",
+        "no-redeclare": "error",
+        "no-return-assign": "error",
+        "no-return-await": "error",
+        "no-sequences": "error",
+        "no-throw-literal": "error",
+        "no-unused-expressions": "error",
+        "yoda": [
+            "error",
+            "never"
+        ],
+        "init-declarations": "error",
+        "brace-style": "error",
+        "no-mixed-spaces-and-tabs": "error",
+        "no-multiple-empty-lines": "error",
+        "no-tabs": "error",
+        "no-trailing-spaces": "error",
+        "no-underscore-dangle": "error",
+        "no-unneeded-ternary": "error",
+        "quotes": [
+            "error",
+            "single",
+            {
+                "allowTemplateLiterals": true
+            }
+        ],
+        "arrow-spacing": "error",
+        "no-class-assign": "error",
+        "no-const-assign": "error",
+        "no-dupe-class-members": "error",
+        "no-duplicate-imports": "error",
+        "prefer-arrow-callback": "error",
+        "prefer-const": "error",
+        "prefer-template": "error",
+        "eol-last": "error",
+        "indent": [
+            "error",
+            2,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "jsx-quotes": "error",
+        "react/prop-types": 2,
+        "no-undef": "off",
+        "no-console": "off"
+    }
+}

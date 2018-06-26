@@ -4,11 +4,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-fa": "^5.0.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.0",
+    "moment": "^2.22.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-jss": "^8.5.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^1.1.4",
+    "redux": "^4.0.0",
     "universal-analytics": "^0.4.17",
     "uuid": "^3.2.1"
   },
@@ -17,10 +19,20 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "@storybook/addon-actions": "^3.4.6",
+    "@storybook/addon-knobs": "^3.4.6",
+    "@storybook/addon-links": "^3.4.6",
+    "@storybook/addon-viewport": "^3.4.6",
+    "@storybook/addons": "^3.4.6",
+    "@storybook/react": "^3.4.6",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-runtime": "^6.26.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0"
   }
 }
