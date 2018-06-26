@@ -1,7 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import App from './app/app'
+import Routes from './routes'
+
 ReactDOM.render(
-  <div>Saluton, mondo!</div>,
+  <App>
+    <Routes />
+  </App>,
   document.getElementById('root')
 )
