@@ -1,21 +1,14 @@
-import * as uuid from 'uuid'
-import { Visitor } from 'universal-analytics'
 import { LOCATION_CHANGE } from 'react-router-redux'
 
-import * as themes from '../themes'
+import analytics from './analytics'
 
-let visitorId = localStorage.getItem('visitorId')
-if (!visitorId) {
-  visitorId = uuid.v4()
-  localStorage.setItem('visitorId', visitorId)
-}
-const visitor = new Visitor(process.env['REACT_APP_GOOGLE_ANALYTICS_APP_ID'], visitorId)
+import * as themes from '../themes'
 
 const analyticsEnabled = Boolean(process.env['REACT_APP_ANALYTICS_ENABLED'])
 
 const pageview = path => {
   if (analyticsEnabled) {
-    visitor.pageview(path).send()
+    analytics.pageview(path).send()
   }
 }
 

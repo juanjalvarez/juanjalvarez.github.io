@@ -6,9 +6,12 @@ import { Provider, connect } from 'react-redux'
 import createHistory from 'history/createBrowserHistory'
 import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux'
 
+import Routes from '../routes'
+import Layout from '../layout'
+
 import rootReducer from '../reducer'
 
-import './app.css'
+import './index.css'
 
 const history = createHistory()
 const routingMiddleware = routerMiddleware(history)
@@ -46,20 +49,16 @@ const mapStateToProps = state => ({
 
 const AppStyling = connect(mapStateToProps)(appStyling)
 
-const App = ({
-  children
-}) => (
+const App = () => (
   <Provider store={store}>
     <AppStyling>
       <ConnectedRouter history={history}>
-        {children}
+        <Layout>
+          <Routes />
+        </Layout>
       </ConnectedRouter>
     </AppStyling>
   </Provider>
 )
-
-App.propTypes = {
-  children: PropTypes.element
-}
 
 export default App
