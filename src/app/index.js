@@ -7,7 +7,7 @@ import createHistory from 'history/createBrowserHistory'
 import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux'
 
 import Routes from '../routes'
-import Layout from '../layout'
+import Layout from '../components/templates/layout'
 
 import rootReducer from '../reducer'
 

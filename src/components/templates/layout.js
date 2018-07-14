@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
+import Sidebar from '../../sidebar'
+
 const styles = theme => ({
   container: {
     backgroundColor: theme.backgroundColor,
@@ -16,7 +18,7 @@ const Layout = ({
   classes
 }) => (
   <div className={classes.container}>
-    <div>sidebar</div>
+    <Sidebar />
     <div>{children}</div>
   </div>
 )
