@@ -4,6 +4,7 @@ import { withKnobs, selectV2 } from '@storybook/addon-knobs'
 import { ThemeProvider } from 'react-jss'
 
 import * as themes from '../src/themes'
+import '../src/app/index.css'
 
 const withBase = next => {
   const theme = selectV2('Theme', themes, 'light')

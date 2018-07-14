@@ -1,8 +1,9 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 
 import ProfilePicture from './ProfilePicture'
 
 it('renders profile picture', () => {
-  shallow(<ProfilePicture />)
+  const elem = mount(<ProfilePicture />)
+  expect(elem.children()).toHaveLength(1)
 })

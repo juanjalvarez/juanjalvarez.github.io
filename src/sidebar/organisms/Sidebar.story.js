@@ -4,12 +4,12 @@ import { action } from '@storybook/addon-actions'
 
 import withTests from '../../utils/withTests'
 
-import ProfilePicture from './ProfilePicture'
+import Sidebar from './Sidebar'
 
-const component = 'ProfilePicture'
+const component = 'Sidebar'
 
 const story = storiesOf('Sidebar', module)
 
 story.addDecorator(withTests(component))
 
-story.add(component, () => <ProfilePicture onClick={action('clicked')} />)
+story.add(component, () => <Sidebar onClick={action('clicked')} />)

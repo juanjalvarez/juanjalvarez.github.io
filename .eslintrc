@@ -104,6 +104,7 @@
         "jsx-quotes": "error",
         "react/prop-types": 2,
         "no-undef": "off",
-        "no-console": "off"
+        "no-console": "off",
+        "no-debugger": "off"
     }
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
-import Sidebar from '../../sidebar'
+import Sidebar from '../../sidebar/organisms/Sidebar'
 
 const styles = theme => ({
   container: {
