@@ -5,8 +5,8 @@ import injectSheet from 'react-jss'
 const styles = {
   container: {
     borderRadius: '50%',
-    width: 120,
-    height: 120,
+    minWidth: 120,
+    minHeight: 120,
     overflow: 'hidden',
     backgroundImage: 'url(images/face.jpg)',
     backgroundSize: 'cover',

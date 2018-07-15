@@ -14,4 +14,5 @@ html, body, #root {
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }

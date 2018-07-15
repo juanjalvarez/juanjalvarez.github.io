@@ -20,6 +20,8 @@ const styles = {
     boxShadow: '0px 4px 30px rgba(0, 0, 0,25%)',
     borderRadius: 20,
     zIndex: 10,
+    maxHeight: '100%',
+    overflowY: 'scroll',
     '@media (max-width: 500px)': {
       top: 0,
       right: 0,
@@ -38,6 +40,8 @@ const styles = {
     }
   },
   options: {
+    minWidth: 50,
+    minHeight: 50,
     cursor: 'pointer',
     '&:hover': {
       animation: 'infinite-rotate 4s infinite',
