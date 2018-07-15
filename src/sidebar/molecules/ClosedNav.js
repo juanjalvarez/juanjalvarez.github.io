@@ -62,7 +62,7 @@ const styles = {
   }
 }
 
-const ClosedSidebar = props => {
+const ClosedNav = props => {
   const {
     classes,
     className,
@@ -91,11 +91,11 @@ const ClosedSidebar = props => {
   )
 }
 
-ClosedSidebar.propTypes = {
+ClosedNav.propTypes = {
   classes: PropTypes.object.isRequired,
   className: PropTypes.string,
   onToggleSidebar: PropTypes.func,
   shouldRenderAnimation: PropTypes.bool
 }
 
-export default injectSheet(styles)(ClosedSidebar)
+export default injectSheet(styles)(ClosedNav)

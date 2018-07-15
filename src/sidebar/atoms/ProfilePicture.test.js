@@ -3,7 +3,9 @@ import { mount } from 'enzyme'
 
 import ProfilePicture from './ProfilePicture'
 
-it('renders profile picture', () => {
-  const elem = mount(<ProfilePicture />)
-  expect(elem.children()).toHaveLength(1)
+describe('ProfilePicture', () => {
+  it('renders profile picture', () => {
+    const elem = mount(<ProfilePicture />)
+    expect(elem.children()).toHaveLength(1)
+  })
 })

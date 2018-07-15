@@ -1,18 +1,14 @@
 import React from 'react'
 import { configure, addDecorator } from '@storybook/react'
 import { withKnobs, selectV2 } from '@storybook/addon-knobs'
-import { ThemeProvider } from 'react-jss'
 
 import * as themes from '../src/themes'
-import '../src/app/index.css'
+
+import Base from '../src/app/templates/Base'
 
 const withBase = next => {
   const theme = selectV2('Theme', themes, 'light')
-  return (
-    <ThemeProvider theme={themes[theme]}>
-      {next()}
-    </ThemeProvider>
-  )
+  return <Base>{next()}</Base>
 }
 
 addDecorator(withBase)

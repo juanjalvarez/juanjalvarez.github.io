@@ -4,12 +4,12 @@ import { action } from '@storybook/addon-actions'
 
 import withTests from '../../utils/withTests'
 
-import OpenSidebar from './OpenSidebar'
+import Nav from './Nav'
 
-const component = 'OpenSidebar'
+const component = 'Nav'
 
-const story = storiesOf('Sidebar', module)
+const story = storiesOf('Nav', module)
 
 story.addDecorator(withTests(component))
 
-story.add(component, () => <OpenSidebar onClick={action('clicked')} />)
+story.add(component, () => <Nav onClick={action('clicked')} />)

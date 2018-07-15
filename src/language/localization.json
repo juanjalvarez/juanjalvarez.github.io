@@ -1,0 +1,28 @@
+{
+  "languages": {
+    "en": "English",
+    "es": "Español"
+  },
+  "strings": {
+    "test_text": {
+      "en": "This is English",
+      "es": "Esto es español"
+    },
+    "nav_about": {
+      "en": "About",
+      "es": "Info"
+    },
+    "nav_experience": {
+      "en": "Experience",
+      "es": "Experiencia"
+    },
+    "nav_skills": {
+      "en": "Skills",
+      "es": "Destrezas"
+    },
+    "nav_projects": {
+      "en": "Projects",
+      "es": "Proyectos"
+    }
+  }
+}

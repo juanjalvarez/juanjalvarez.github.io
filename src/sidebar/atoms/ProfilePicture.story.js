@@ -8,7 +8,7 @@ import ProfilePicture from './ProfilePicture'
 
 const component = 'ProfilePicture'
 
-const story = storiesOf('Sidebar', module)
+const story = storiesOf('Nav', module)
 
 story.addDecorator(withTests(component))
 

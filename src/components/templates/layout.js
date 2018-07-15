@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
-import Sidebar from '../../sidebar/organisms/Sidebar'
+import Nav from '../../sidebar/organisms/Nav'
 
 const styles = theme => ({
   container: {
@@ -18,7 +18,7 @@ const Layout = ({
   classes
 }) => (
   <div className={classes.container}>
-    <Sidebar />
+    <Nav />
     <div>{children}</div>
   </div>
 )

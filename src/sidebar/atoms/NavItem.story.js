@@ -8,11 +8,11 @@ import NavItem from './NavItem'
 
 const component = 'NavItem'
 
-const story = storiesOf('Sidebar', module)
+const story = storiesOf('Nav', module)
 
 story.addDecorator(withTests(component))
 
 story.add(component, () => {
   const displayText = text('text', 'Saluton, mondo!')
-  return <NavItem>{displayText}</NavItem>
+  return <NavItem to="/">{displayText}</NavItem>
 })

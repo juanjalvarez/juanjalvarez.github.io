@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
-import ClosedSidebar from '../molecules/ClosedSidebar'
-import OpenSidebar from '../molecules/OpenSidebar'
+import ClosedNav from '../molecules/ClosedNav'
+import OpenNav from '../molecules/OpenNav'
 
 const styles = {
   container: {
@@ -11,11 +11,13 @@ const styles = {
     width: '100vw',
     height: '100vh',
     backgroundColor: 'white',
-    zIndex: 5
+    zIndex: 5,
+    color: '#4A4A4A',
+    userSelect: 'none'
   }
 }
 
-class Sidebar extends Component {
+class Nav extends Component {
 
   static propTypes = {
     classes: PropTypes.object.isRequired
@@ -45,9 +47,9 @@ class Sidebar extends Component {
       <nav className={classes.container}>
         {
           isOpen ? (
-            <OpenSidebar onToggleSidebar={this.handleToggleSidebar} />
+            <OpenNav onToggleSidebar={this.handleToggleSidebar} />
           ) : (
-            <ClosedSidebar onToggleSidebar={this.handleToggleSidebar} shouldRenderAnimation={!firstOpened} />
+            <ClosedNav onToggleSidebar={this.handleToggleSidebar} shouldRenderAnimation={!firstOpened} />
           )
         }
       </nav>
@@ -55,4 +57,4 @@ class Sidebar extends Component {
   }
 }
 
-export default injectSheet(styles)(Sidebar)
+export default injectSheet(styles)(Nav)
