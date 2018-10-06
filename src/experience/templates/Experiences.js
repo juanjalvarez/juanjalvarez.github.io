@@ -6,7 +6,6 @@ import { Route } from 'react-router-dom'
 import ExperienceSummary from '../molecules/ExperienceSummary'
 import ExperienceModal from './ExperienceModal'
 import Spacing from '../../components/atoms/Spacing'
-import Modal from '../../components/organisms/Modal'
 
 import data from '../../data.json'
 
