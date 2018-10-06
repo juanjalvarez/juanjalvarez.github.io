@@ -10,7 +10,8 @@
       "backgroundColor": "#bd081c",
       "foregroundColor": "#ffffff",
       "logo": "/images/pinterest_logo.png",
-      "icon": "/icons/pinterest.svg"
+      "icon": "pinterest",
+      "link": "https://about.pinterest.com/en"
     },
     "carelinx": {
       "name": "CareLinx",
@@ -22,7 +23,8 @@
       "backgroundColor": "#ff4d12",
       "foregroundColor": "#ffffff",
       "logo": "/images/carelinx_logo.png",
-      "icon": "/icons/carelinx.svg"
+      "icon": "carelinx",
+      "link": "https://www.carelinx.com/about"
     },
     "cegsoft": {
       "name": "CEGsoft",
@@ -34,7 +36,8 @@
       "backgroundColor": "#076795",
       "foregroundColor": "#ffffff",
       "logo": "/images/cegsoft_logo.png",
-      "icon": "/icons/file-invoice-dollar.svg"
+      "icon": "file-invoice-dollar",
+      "link": "https://home.cegsoft.com/#about"
     },
     "usf_nsf_reu": {
       "name": "USF NSF REU",
@@ -46,7 +49,8 @@
       "backgroundColor": "##007953",
       "foregroundColor": "#ffffff",
       "logo": "/images/nsf_logo.png",
-      "icon": "/icons/microscope.svg"
+      "icon": "microscope",
+      "link": "http://reu.cse.usf.edu/index.html"
     }
   },
   "projects": {
@@ -58,15 +62,58 @@
       "start": "9-1-2016",
       "backgroundColor": "#ffe558",
       "foregroundColor": "#000000",
-      "icon": "/icons/js.svg"
+      "icon": "js"
     },
     "python": {
       "name": "Python",
       "description": "PY DESC",
       "start": "6-19-2017",
-      "backgroundColor": "##2B5B84",
+      "backgroundColor": "#2B5B84",
       "foregroundColor": "#ffffff",
-      "icon": "/icons/python.svg"
+      "icon": "python"
+    },
+    "flask": {
+      "name": "Flask",
+      "description": "FLASK DESC",
+      "start": "9-24-2018",
+      "backgroundColor": "#000000",
+      "foregroundColor": "#ffffff",
+      "icon": "python"
+    },
+    "django": {
+      "name": "Django",
+      "description": "DJANGO DESC",
+      "start": "6-19-2017",
+      "backgroundColor": "#0C3C26",
+      "foregroundColor": "#ffffff",
+      "icon": "python"
+    },
+    "csharp": {
+      "name": "Visual C#",
+      "description": "C# DESC",
+      "start": "9-1-2016",
+      "backgroundColor": "#512bd4",
+      "foregroundColor": "#ffffff",
+      "icon": "csharp"
+    },
+    "java": {
+      "name": "Java",
+      "description": "JAVA DESC",
+      "start": "6-1-2014",
+      "backgroundColor": "#f80000",
+      "foregroundColor": "#ffffff",
+      "icon": "java"
     }
-  }
+  },
+  "experienceSkills": [
+    ["carelinx", "javascript"],
+    ["carelinx", "python"],
+    ["carelinx", "django"],
+    ["pinterest", "javascript"],
+    ["pinterest", "python"],
+    ["pinterest", "flask"],
+    ["cegsoft", "javascript"],
+    ["cegsoft", "csharp"],
+    ["usf_nsf_reu", "java"]
+  ]
 }

@@ -17,6 +17,14 @@ html, body, #root {
   -webkit-overflow-scrolling: touch;
 }
 
+img::selection {
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
 #overlay-root {
   position: absolute;
   top: 0;

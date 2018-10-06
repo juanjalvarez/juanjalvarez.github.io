@@ -21,7 +21,8 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    animation: () => loaded ? '' : 'fadein 3s forwards'
+    animation: () => loaded ? 'fadein 0.1s forwards' : 'fadein-quick 3s forwards',
+    opacity: 0
   },
   body: {
     maxWidth: 700,
@@ -30,9 +31,17 @@ const styles = {
     height: 'auto',
     backgroundColor: 'white',
     boxShadow: '0px 4px 30px rgba(0, 0, 0,25%)',
-    margin: 'auto',
+    margin: 20,
     padding: 30,
     borderRadius: 10
+  },
+  '@keyframes fadein': {
+    from: {
+      opacity: 0
+    },
+    to: {
+      opacity: 1
+    }
   }
 }
 

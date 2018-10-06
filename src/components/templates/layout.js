@@ -17,10 +17,10 @@ const styles = theme => ({
     overflowY: 'scroll'
   },
   children: {
-    animation: 'fadein 3s forwards',
+    animation: 'fadein-quick 3s forwards',
     height: '100%'
   },
-  '@keyframes fadein': {
+  '@keyframes fadein-quick': {
     '0%': {
       opacity: 0
     },

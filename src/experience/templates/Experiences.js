@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
-import { Route } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 
 import ExperienceSummary from '../molecules/ExperienceSummary'
 import ExperienceModal from './ExperienceModal'
@@ -21,6 +21,10 @@ const styles = {
   body: {
     maxWidth: 800,
     width: '100%'
+  },
+  experienceLink: {
+    textDecoration: 'none',
+    color: 'inherit'
   }
 }
 
@@ -38,11 +42,12 @@ const Experiences = props => {
           Object.keys(experiences).map(key => {
             const experience = experiences[key]
             return (
-              <ExperienceSummary
-                key={key}
-                id={key}
-                {...experience}
-              />
+              <Link className={classes.experienceLink} key={key} to={`/experience/${key}`}>
+                <ExperienceSummary
+                  id={key}
+                  {...experience}
+                />
+              </Link>
             )
           })
         }
