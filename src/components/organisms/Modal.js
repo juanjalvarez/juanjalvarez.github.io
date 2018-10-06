@@ -24,8 +24,10 @@ const styles = {
     animation: () => loaded ? '' : 'fadein 3s forwards'
   },
   body: {
-    width: 500,
-    height: 500,
+    maxWidth: 700,
+    maxHeight: 500,
+    width: '100%',
+    height: 'auto',
     backgroundColor: 'white',
     boxShadow: '0px 4px 30px rgba(0, 0, 0,25%)',
     margin: 'auto',
@@ -42,7 +44,9 @@ class Modal extends Component {
   static propTypes = {
     setIsBlurred: PropTypes.func.isRequired,
     classes: PropTypes.object.isRequired,
-    onOutsideClick: PropTypes.func
+    onOutsideClick: PropTypes.func,
+    children: PropTypes.any,
+    className: PropTypes.string
   }
 
   static getDerivedStateFromProps = props => props.setIsBlurred(true)
@@ -63,22 +67,19 @@ class Modal extends Component {
 
   render() {
     const {
-      classes
+      classes,
+      className
     } = this.props
     return (
       <Overlay>
         <div className={classes.container} onClick={this.handleOutOfModalClick}>
-          <div className={classes.body} onClick={this.handleInModalClick}>
+          <div className={[classes.body, className].join(' ')} onClick={this.handleInModalClick}>
             {this.props.children}
           </div>
         </div>
       </Overlay>
     )
   }
-}
-
-Modal.propTypes = {
-  children: PropTypes.any
 }
 
 const mapActionsToProps = dispatch => bindActionCreators(appActions, dispatch)
