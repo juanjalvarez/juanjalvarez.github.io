@@ -8,6 +8,7 @@ import NavItem from '../atoms/NavItem'
 
 const styles = {
   container: {
+    backgroundColor: 'white',
     position: 'fixed',
     top: 30,
     right: 30,
@@ -52,6 +53,7 @@ const styles = {
     marginBottom: 30
   },
   navIconRow: {
+    display: 'flex',
     marginBottom: 15,
     '&:last-child': {
       marginBottom: 0
@@ -59,6 +61,8 @@ const styles = {
   },
   navIconLink: {
     marginRight: 15,
+    width: 50,
+    height: 50,
     '&:last-child': {
       marginRight: 0
     }
@@ -94,15 +98,15 @@ const OpenNav = props => {
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/juanjalvarez97/"
           >
-            <Icon name="linkedin-square" />
+            <Icon name="linkedin" size={50} />
           </a>
           <a
             className={classes.navIconLink}
             target="_blank"
             rel="noopener noreferrer"
-            href="mailto:jalvarez5241997@gmail.com"
+            href="mailto:contact@juanjalvarez.me"
           >
-            <Icon name="envelope-o" />
+            <Icon name="envelope-o" size={50} />
           </a>
         </div>
         <div className={classes.navIconRow}>
@@ -112,7 +116,7 @@ const OpenNav = props => {
             rel="noopener noreferrer"
             href="https://github.com/juanjalvarez"
           >
-            <Icon name="github" />
+            <Icon name="github" size={50} />
           </a>
           <a
             className={classes.navIconLink}
@@ -120,11 +124,11 @@ const OpenNav = props => {
             rel="noopener noreferrer"
             href="https://gitlab.com/juanjalvarez"
           >
-            <Icon name="gitlab" />
+            <Icon name="gitlab" size={50} />
           </a>
         </div>
       </div>
-      <Icon className={classes.options} name="cog" />
+      <Icon className={classes.options} name="cog" size={50} />
     </div>
   )
 }

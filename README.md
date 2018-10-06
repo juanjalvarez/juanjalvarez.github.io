@@ -1,1 +1,0 @@
-[![CircleCI](https://circleci.com/gh/juanjalvarez/juanjalvarez.github.io/tree/development.svg?style=svg)](https://circleci.com/gh/juanjalvarez/juanjalvarez.github.io/tree/development)

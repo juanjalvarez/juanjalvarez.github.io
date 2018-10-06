@@ -16,3 +16,9 @@ html, body, #root {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
+
+#overlay-root {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

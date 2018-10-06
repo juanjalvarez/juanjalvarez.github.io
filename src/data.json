@@ -1,0 +1,72 @@
+{
+  "experiences": {
+    "pinterest": {
+      "name": "Pinterest",
+      "description": "PIN DESC",
+      "location": "San Francisco, CA",
+      "position": "Software Engineer - Analytics Platform",
+      "start": "9-24-2018",
+      "end": "now",
+      "backgroundColor": "#bd081c",
+      "foregroundColor": "#ffffff",
+      "logo": "/images/pinterest_logo.png",
+      "icon": "/icons/pinterest.svg"
+    },
+    "carelinx": {
+      "name": "CareLinx",
+      "description": "CLX DESC",
+      "location": "San Bruno, CA",
+      "position": "Fullstack Engineer",
+      "start": "6-19-2017",
+      "end": "9-10-2018",
+      "backgroundColor": "#ff4d12",
+      "foregroundColor": "#ffffff",
+      "logo": "/images/carelinx_logo.png",
+      "icon": "/icons/carelinx.svg"
+    },
+    "cegsoft": {
+      "name": "CEGsoft",
+      "description": "CEG DESC",
+      "location": "Guaynabo, PR",
+      "position": "Software Engineer - Intern",
+      "start": "9-1-2016",
+      "end": "3-1-2017",
+      "backgroundColor": "#076795",
+      "foregroundColor": "#ffffff",
+      "logo": "/images/cegsoft_logo.png",
+      "icon": "/icons/file-invoice-dollar.svg"
+    },
+    "usf_nsf_reu": {
+      "name": "USF NSF REU",
+      "description": "USF DESC",
+      "location": "Tampa, FL",
+      "position": "Research Intern",
+      "start": "5-25-2016",
+      "end": "7-29-2016",
+      "backgroundColor": "##007953",
+      "foregroundColor": "#ffffff",
+      "logo": "/images/nsf_logo.png",
+      "icon": "/icons/microscope.svg"
+    }
+  },
+  "projects": {
+  },
+  "skills": {
+    "javascript": {
+      "name": "JavaScript",
+      "description": "JS DESC",
+      "start": "9-1-2016",
+      "backgroundColor": "#ffe558",
+      "foregroundColor": "#000000",
+      "icon": "/icons/js.svg"
+    },
+    "python": {
+      "name": "Python",
+      "description": "PY DESC",
+      "start": "6-19-2017",
+      "backgroundColor": "##2B5B84",
+      "foregroundColor": "#ffffff",
+      "icon": "/icons/python.svg"
+    }
+  }
+}

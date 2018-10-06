@@ -8,10 +8,7 @@ import OpenNav from '../molecules/OpenNav'
 const styles = {
   container: {
     position: 'fixed',
-    width: '100vw',
-    height: '100vh',
-    backgroundColor: 'white',
-    zIndex: 5,
+    zIndex: 10,
     color: '#4A4A4A',
     userSelect: 'none'
   }

@@ -8,7 +8,7 @@ const styles = {
     minWidth: 120,
     minHeight: 120,
     overflow: 'hidden',
-    backgroundImage: 'url(images/face.jpg)',
+    backgroundImage: 'url(/images/face.jpeg)',
     backgroundSize: 'cover',
   }
 }

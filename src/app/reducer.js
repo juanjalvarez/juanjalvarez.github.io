@@ -1,12 +1,18 @@
-import * as themes from '../themes'
+import * as constants from './constants'
 
 const initialState = {
-  theme: themes.light
+  isBlurred: false
 }
 
 export default (state = initialState, action) => {
-  const { type } = action
+  const { type, isBlurred } = action
   switch (type) {
+    case constants.SET_IS_BLURRED: {
+      return {
+        ...state,
+        isBlurred
+      }
+    }
     default: {
       return state
     }

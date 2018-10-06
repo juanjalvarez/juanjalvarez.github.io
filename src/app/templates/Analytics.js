@@ -5,7 +5,6 @@ import analytics from '../../utils/analytics'
 const analyticsEnabled = Boolean(process.env['REACT_APP_ANALYTICS_ENABLED'])
 
 const pageview = path => {
-  console.log('changed', path)
   if (analyticsEnabled) {
     analytics.pageview(path).send()
   }
