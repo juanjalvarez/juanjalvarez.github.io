@@ -14,23 +14,19 @@ const styles = {
     top: 60,
     right: 100,
     cursor: 'pointer',
+    animation: props => props.shouldRenderAnimation ? 'slide 3s forwards' : '',
     '@media (max-width: 500px)': {
-      top: 20,
-      right: 20
+      top: 0,
+      right: -40
     }
-  },
-  containerAnimated: {
-    animation: 'slide 3s forwards',
   },
   name: {
     width: 180,
     bottom: -40,
     margin: 0,
     position: 'absolute',
-    opacity: 0
-  },
-  nameAnimated: {
-    animation: 'name-slide 3s forwards'
+    opacity: 0,
+    animation: props => props.shouldRenderAnimation ? 'name-slide 3s forwards' : ''
   },
   picture: {
     boxShadow: '0px 3px 10px rgba(0, 0, 0, 50%)'
@@ -45,8 +41,8 @@ const styles = {
       right: (window.innerWidth / 2) - 60
     },
     '100%': {
-      top: window.innerWidth < 501 ? 20 : 60,
-      right: window.innerWidth < 501 ? 20 : 100,
+      top: window.innerWidth < 501 ? 0 : 60,
+      right: window.innerWidth < 501 ? -40 : 100,
     }
   },
   '@keyframes name-slide': {
@@ -66,27 +62,17 @@ const ClosedNav = props => {
   const {
     classes,
     className,
-    onToggleSidebar,
-    shouldRenderAnimation
+    onToggleSidebar
   } = props
-  const renderAnim = shouldRenderAnimation
   return (
     <div
       className={[
         classes.container,
-        renderAnim ? classes.containerAnimated : '',
         className
       ].join(' ')}
     >
       <ProfilePicture className={classes.picture} onClick={onToggleSidebar} />
-      <h2
-        className={[
-          classes.name,
-          renderAnim ? classes.nameAnimated : ''
-        ].join(' ')}
-      >
-        Juan J. Alvarez
-      </h2>
+      <h2 className={classes.name}>Juan J. Alvarez</h2>
     </div>
   )
 }

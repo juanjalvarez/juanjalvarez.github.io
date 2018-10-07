@@ -33,26 +33,27 @@ const styles = {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      textAlign: 'center'
+      textAlign: 'center',
+      marginLeft: 0
     }
   },
   company: {
     fontSize: 24,
     display: 'flex'
   },
-  companyLink: {
+  externalLink: {
     marginLeft: 10,
     fill: '#a0a0a0'
   },
   position: {
-    color: '#404040'
+    color: '#404040',
+    fontFamily: 'serif'
   },
   extrainfo: {
     display: 'flex',
     color: '#a0a0a0',
     fill: '#a0a0a0',
-    marginTop: 4,
-    marginBottom: 4,
+    fontSize: 14,
     '& > *:first-child': {
       marginRight: 5
     }
@@ -62,6 +63,7 @@ const styles = {
 const ExperienceSummary = props => {
   const {
     classes,
+    className,
     name,
     position,
     location,
@@ -81,15 +83,15 @@ const ExperienceSummary = props => {
   const startString = startDate.format('MMM Do, YYYY')
   const endString = end === 'now' ? 'Now' : endDate.format('MMM Do, YYYY')
   return (
-    <div className={[classes.container, plain ? classes.plain : ''].join(' ')}>
-      <CircularImage src={logo} size="100px" />
+    <div className={[classes.container, className, plain ? classes.plain : ''].join(' ')}>
+      <CircularImage src={logo} size={100} />
       <div className={classes.info}>
         <div className={classes.company}>
           {name}
           {
             showLink && (
               <a
-                className={classes.companyLink}
+                className={classes.externalLink}
                 href={link}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -102,10 +104,13 @@ const ExperienceSummary = props => {
         </div>
         <div className={classes.position}>{position}</div>
         <div className={classes.extrainfo}>
-          <Icon name="map-marker-alt" size={16} /> {location}
+          <Icon name="map-marker-alt" size={14} /> {location}
         </div>
         <div className={classes.extrainfo}>
-          <Icon name="calendar-alt" size={16} /> {startString} - {endString}, {durationString}
+          <Icon name="calendar-alt" size={14} /> {startString} - {endString}
+        </div>
+        <div className={classes.extrainfo}>
+          <Icon name="clock" size={14} /> {durationString}
         </div>
       </div>
     </div>
@@ -122,7 +127,8 @@ ExperienceSummary.propTypes ={
   logo: PropTypes.string.isRequired,
   plain: PropTypes.bool,
   link: PropTypes.string,
-  showLink: PropTypes.bool
+  showLink: PropTypes.bool,
+  className: PropTypes.string
 }
 
 export default injectSheet(styles)(ExperienceSummary)

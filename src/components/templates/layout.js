@@ -4,7 +4,8 @@ import injectSheet from 'react-jss'
 import { Switch, Route } from 'react-router-dom'
 
 import Experiences from '../../experience/templates/Experiences'
-import Projects from '../../projects/Projects'
+import Projects from '../../projects/templates/Projects'
+import Skills from '../../skills/templates/Skills'
 
 import Blur from '../organisms/Blur'
 import Nav from '../../sidebar/organisms/Nav'
@@ -42,6 +43,7 @@ const Layout = ({
       <Switch>
         <Route path="/projects" component={Projects} />
         <Route path="/experience" component={Experiences} />
+        <Route path="/skills" component={Skills} />
       </Switch>
     </Blur>
   </div>

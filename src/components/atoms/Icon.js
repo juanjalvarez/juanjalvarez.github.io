@@ -4,10 +4,13 @@ import injectSheet from 'react-jss'
 import ReactSVG from 'react-svg'
 
 const styles = {
-  container: props => ({
-    width: `${props.size || 50}px`,
-    height: `${props.size || 50}px`
-  })
+  container: {
+    width: props => props.size,
+    height: props => props.size,
+    '&::selection': {
+      backgroundColor: 'transparent'
+    }
+  }
 }
 
 const Icon = props => {

@@ -7,7 +7,10 @@ const styles = {
   container: {
     fontSize: 32,
     textDecoration: 'none',
-    color: 'inherit'
+    color: 'inherit',
+    '&:hover': {
+      textDecoration: 'underline'
+    }
   }
 }
 

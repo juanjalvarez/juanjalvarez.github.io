@@ -18,6 +18,11 @@ const styles = {
     borderRadius: 5,
     '& > *:first-child': {
       marginRight: 5
+    },
+    name: {
+      '&::selection': {
+        backgroundColor: 'transparent'
+      }
     }
   }
 }
@@ -38,7 +43,7 @@ const Tag = props => {
       to={link}
     >
       <Icon name={icon} size={16} />
-      <span>{name}</span>
+      <span className={classes.name}>{name}</span>
     </Link>
   )
 }

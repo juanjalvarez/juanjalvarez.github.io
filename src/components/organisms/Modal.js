@@ -21,7 +21,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    animation: () => loaded ? 'fadein 0.1s forwards' : 'fadein-quick 3s forwards',
+    animation: () => loaded ? 'fadein 0.2s forwards' : 'fadein-quick 3s forwards',
     opacity: 0
   },
   body: {

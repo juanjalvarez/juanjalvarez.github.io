@@ -4,8 +4,8 @@ import injectSheet from 'react-jss'
 
 const styles = {
   container: props => ({
-    minWidth: props.width || props.size,
-    minHeight: props.height || props.size
+    minWidth: [props.width, props.size, 50].find(v => v !== undefined),
+    minHeight: [props.height, props.size, 50].find(v => v !== undefined)
   })
 }
 

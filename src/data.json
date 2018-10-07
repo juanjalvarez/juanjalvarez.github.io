@@ -46,7 +46,7 @@
       "position": "Research Intern",
       "start": "5-25-2016",
       "end": "7-29-2016",
-      "backgroundColor": "##007953",
+      "backgroundColor": "#007953",
       "foregroundColor": "#ffffff",
       "logo": "/images/nsf_logo.png",
       "icon": "microscope",
@@ -62,7 +62,9 @@
       "start": "9-1-2016",
       "backgroundColor": "#ffe558",
       "foregroundColor": "#000000",
-      "icon": "js"
+      "icon": "js",
+      "proficient": true,
+      "logo": "/images/js_logo.png"
     },
     "python": {
       "name": "Python",
@@ -70,7 +72,9 @@
       "start": "6-19-2017",
       "backgroundColor": "#2B5B84",
       "foregroundColor": "#ffffff",
-      "icon": "python"
+      "icon": "python",
+      "proficient": true,
+      "logo": "/images/python_logo.png"
     },
     "flask": {
       "name": "Flask",
@@ -78,7 +82,9 @@
       "start": "9-24-2018",
       "backgroundColor": "#000000",
       "foregroundColor": "#ffffff",
-      "icon": "python"
+      "icon": "python",
+      "proficient": false,
+      "logo": "/images/flask_logo.png"
     },
     "django": {
       "name": "Django",
@@ -86,7 +92,9 @@
       "start": "6-19-2017",
       "backgroundColor": "#0C3C26",
       "foregroundColor": "#ffffff",
-      "icon": "python"
+      "icon": "python",
+      "proficient": false,
+      "logo": "/images/python_logo.png"
     },
     "csharp": {
       "name": "Visual C#",
@@ -94,7 +102,9 @@
       "start": "9-1-2016",
       "backgroundColor": "#512bd4",
       "foregroundColor": "#ffffff",
-      "icon": "csharp"
+      "icon": "csharp",
+      "proficient": false,
+      "logo": "/images/csharp_logo.png"
     },
     "java": {
       "name": "Java",
@@ -102,7 +112,9 @@
       "start": "6-1-2014",
       "backgroundColor": "#f80000",
       "foregroundColor": "#ffffff",
-      "icon": "java"
+      "icon": "java",
+      "proficient": true,
+      "logo": "/images/java_logo.png"
     }
   },
   "experienceSkills": [

@@ -63,6 +63,10 @@ const styles = {
     marginRight: 15,
     width: 50,
     height: 50,
+    transitionDuration: '0.1s',
+    '&:hover': {
+      transform: 'scale(1.2)'
+    },
     '&:last-child': {
       marginRight: 0
     }

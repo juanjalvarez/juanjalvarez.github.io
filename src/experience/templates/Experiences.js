@@ -25,17 +25,22 @@ const styles = {
   experienceLink: {
     textDecoration: 'none',
     color: 'inherit'
+  },
+  summary: {
+    transitionDuration: '0.2s',
+    '&:hover': {
+      transform: 'scale(1.05)'
+    }
   }
 }
 
 const Experiences = props => {
   const {
-    classes,
-    match
+    classes
   } = props
   return (
     <div className={classes.container}>
-      <Route path={`${match.path}/:experienceId`} component={ExperienceModal} />
+      <Route path="/experience/:experienceId" component={ExperienceModal} />
       <div className={classes.body}>
         <Spacing with="100%" height="10%" />
         {
@@ -44,6 +49,7 @@ const Experiences = props => {
             return (
               <Link className={classes.experienceLink} key={key} to={`/experience/${key}`}>
                 <ExperienceSummary
+                  className={classes.summary}
                   id={key}
                   {...experience}
                 />
@@ -57,8 +63,7 @@ const Experiences = props => {
 }
 
 Experiences.propTypes = {
-  classes: PropTypes.object.isRequired,
-  match: PropTypes.object
+  classes: PropTypes.object.isRequired
 }
 
 export default injectSheet(styles)(Experiences)
