@@ -1,12 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import { Link, Route } from 'react-router-dom'
 
-import SkillIcon from '../atoms/SkillIcon'
-import Spacing from '../../components/atoms/Spacing'
+import SkillIcon from './SkillIcon'
+import Spacing from '../components/Spacing'
 import SkillModal from './SkillModal'
 
-import data from '../../data.json'
+import data from '../data.json'
 
 const skills = Object.keys(data['skills']).map(skillId => ({
   ...data['skills'][skillId],
@@ -81,6 +82,10 @@ const Skills = ({
       </div>
     </div>
   )
+}
+
+Skills.propTypes = {
+  classes: PropTypes.object.isRequired,
 }
 
 export default injectSheet(styles)(Skills)

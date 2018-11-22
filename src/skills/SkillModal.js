@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import moment from 'moment'
 
-import Modal from '../../components/organisms/Modal'
-import CircularImage from '../../components/atoms/CircularImage'
-import Icon from '../../components/atoms/Icon'
-import Tag from '../../components/molecules/Tag'
+import Modal from '../components/Modal'
+import CircularImage from '../components/CircularImage'
+import Icon from '../components/Icon'
+import Tag from '../components/Tag'
 
-import data from '../../data.json'
+import data from '../data.json'
 
 const styles = {
   header: {
@@ -51,7 +51,8 @@ const styles = {
   },
   externalLink: {
     marginLeft: 10,
-    fill: '#a0a0a0'
+    fill: '#a0a0a0',
+    cursor: 'pointer',
   },
   position: {
     color: '#404040'

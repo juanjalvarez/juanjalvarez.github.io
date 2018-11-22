@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
-import CircularImage from '../../components/atoms/CircularImage'
+import CircularImage from '../components/CircularImage'
 
 const styles = {
   container: {
@@ -33,5 +34,12 @@ const SkillIcon = ({
     <span className={classes.name}>{name}</span>
   </div>
 )
+
+SkillIcon.propTypes = {
+  classes: PropTypes.object.isRequired,
+  className: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  logo: PropTypes.string.isRequired
+}
 
 export default injectSheet(styles)(SkillIcon)

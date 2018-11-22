@@ -64,7 +64,8 @@
       "foregroundColor": "#000000",
       "icon": "js",
       "proficient": true,
-      "logo": "/images/js_logo.png"
+      "logo": "/images/js_logo.png",
+      "link": "https://www.javascript.com/"
     },
     "python": {
       "name": "Python",
@@ -74,7 +75,8 @@
       "foregroundColor": "#ffffff",
       "icon": "python",
       "proficient": true,
-      "logo": "/images/python_logo.png"
+      "logo": "/images/python_logo.png",
+      "link": "https://www.python.org/"
     },
     "flask": {
       "name": "Flask",
@@ -84,7 +86,8 @@
       "foregroundColor": "#ffffff",
       "icon": "python",
       "proficient": false,
-      "logo": "/images/flask_logo.png"
+      "logo": "/images/flask_logo.png",
+      "link": "http://flask.pocoo.org/"
     },
     "django": {
       "name": "Django",
@@ -94,7 +97,8 @@
       "foregroundColor": "#ffffff",
       "icon": "python",
       "proficient": false,
-      "logo": "/images/python_logo.png"
+      "logo": "/images/python_logo.png",
+      "link": "https://www.djangoproject.com/"
     },
     "csharp": {
       "name": "Visual C#",
@@ -104,7 +108,8 @@
       "foregroundColor": "#ffffff",
       "icon": "csharp",
       "proficient": false,
-      "logo": "/images/csharp_logo.png"
+      "logo": "/images/csharp_logo.png",
+      "link": "https://docs.microsoft.com/en-us/dotnet/csharp/"
     },
     "java": {
       "name": "Java",
@@ -114,7 +119,8 @@
       "foregroundColor": "#ffffff",
       "icon": "java",
       "proficient": true,
-      "logo": "/images/java_logo.png"
+      "logo": "/images/java_logo.png",
+      "link": "https://www.oracle.com/java/"
     }
   },
   "experienceSkills": [

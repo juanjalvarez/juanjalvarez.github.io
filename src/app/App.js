@@ -6,12 +6,12 @@ import { Provider } from 'react-redux'
 import { createBrowserHistory } from 'history'
 import { connectRouter, routerMiddleware, ConnectedRouter } from 'connected-react-router'
 
-import Layout from '../../components/templates/Layout'
+import Layout from './Layout'
 
-import rootReducer from '../../reducer'
-import theme from '../../theme'
-import analytics from '../../utils/analytics'
-import '../app.css'
+import rootReducer from './reducer'
+import theme from '../theme'
+import analytics from '../utils/analytics'
+import './app.css'
 
 const analyticsEnabled = Boolean(process.env['REACT_APP_ANALYTICS_ENABLED'])
 

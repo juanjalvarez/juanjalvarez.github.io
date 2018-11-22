@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
-import Link from '../atoms/Link'
-import Icon from '../atoms/Icon'
+import Link from './Link'
+import Icon from './Icon'
 
 const styles = {
   container: {

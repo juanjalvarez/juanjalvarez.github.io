@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import { Link, Route } from 'react-router-dom'
 
-import ExperienceSummary from '../molecules/ExperienceSummary'
+import ExperienceSummary from './ExperienceSummary'
 import ExperienceModal from './ExperienceModal'
-import Spacing from '../../components/atoms/Spacing'
+import Spacing from '../components/Spacing'
 
-import data from '../../data.json'
+import data from '../data.json'
 
 const experiences = data['experiences']
 

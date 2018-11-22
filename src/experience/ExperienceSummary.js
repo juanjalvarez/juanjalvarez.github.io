@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import moment from 'moment'
 
-import Icon from '../../components/atoms/Icon'
-import CircularImage from '../../components/atoms/CircularImage'
+import Icon from '../components/Icon'
+import CircularImage from '../components/CircularImage'
 
 const styles = {
   container: {

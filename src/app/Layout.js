@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import { Switch, Route } from 'react-router-dom'
 
-import Experiences from '../../experience/templates/Experiences'
-import Projects from '../../projects/templates/Projects'
-import Skills from '../../skills/templates/Skills'
+import Experiences from '../experience/Experiences'
+import Projects from '../projects/Projects'
+import Skills from '../skills/Skills'
 
-import Blur from '../organisms/Blur'
-import Nav from '../../sidebar/organisms/Nav'
+import Blur from '../components/Blur'
+import Nav from '../sidebar/Nav'
 
 const styles = theme => ({
   container: {

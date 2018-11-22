@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
-import ProfilePicture from '../atoms/ProfilePicture'
+import ProfilePicture from './ProfilePicture'
 
 const styles = {
   container: {

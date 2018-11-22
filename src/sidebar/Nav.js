@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
-import ClosedNav from '../molecules/ClosedNav'
-import OpenNav from '../molecules/OpenNav'
+import ClosedNav from './ClosedNav'
+import OpenNav from './OpenNav'
 
 const styles = {
   container: {

@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
-import ExperienceSummary from '../molecules/ExperienceSummary'
-import Modal from '../../components/organisms/Modal'
-import Tag from '../../components/molecules/Tag'
+import ExperienceSummary from './ExperienceSummary'
+import Modal from '../components/Modal'
+import Tag from '../components/Tag'
 
-import data from '../../data.json'
+import data from '../data.json'
 
 const styles = {
   header: {

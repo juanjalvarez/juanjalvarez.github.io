@@ -6,7 +6,7 @@ import injectSheet from 'react-jss'
 
 import Overlay from './Overlay'
 
-import * as appActions from '../../app/actions'
+import * as appActions from '../app/actions'
 
 let loaded = false
 setTimeout(() => {
