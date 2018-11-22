@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
+import { connect } from 'react-redux'
+import moment from 'moment'
 
 import ProfilePicture from './ProfilePicture'
 
@@ -14,7 +16,7 @@ const styles = {
     top: 60,
     right: 100,
     cursor: 'pointer',
-    animation: props => props.shouldRenderAnimation ? 'slide 3s forwards' : '',
+    animation: props => (props.shouldRenderAnimation && !props.alreadyAnimatedToday) ? 'slide 3s forwards' : '',
     '@media (max-width: 500px)': {
       top: 0,
       right: -40
@@ -26,7 +28,7 @@ const styles = {
     margin: 0,
     position: 'absolute',
     opacity: 0,
-    animation: props => props.shouldRenderAnimation ? 'name-slide 3s forwards' : ''
+    animation: props => (props.shouldRenderAnimation && !props.alreadyAnimatedToday) ? 'name-slide 3s forwards' : ''
   },
   picture: {
     boxShadow: '0px 3px 10px rgba(0, 0, 0, 50%)'
@@ -81,7 +83,14 @@ ClosedNav.propTypes = {
   classes: PropTypes.object.isRequired,
   className: PropTypes.string,
   onToggleSidebar: PropTypes.func,
-  shouldRenderAnimation: PropTypes.bool
+  shouldRenderAnimation: PropTypes.bool,
+  alreadyAnimatedToday: PropTypes.bool
 }
 
-export default injectSheet(styles)(ClosedNav)
+const mapStateToProps = state => ({
+  alreadyAnimatedToday: state.app.lastAccessed === moment().format('YYYY-MM-DD')
+})
+
+export default connect(mapStateToProps)(
+  injectSheet(styles)(ClosedNav)
+)

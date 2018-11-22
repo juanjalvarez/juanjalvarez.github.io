@@ -35,6 +35,12 @@ const styles = {
     fontSize: 24,
     display: 'flex'
   },
+  plain: {
+    margin: 0,
+    boxShadow: 'none',
+    borderRadius: 0,
+    padding: 0
+  },
   externalLink: {
     marginLeft: 10,
     fill: '#a0a0a0'
@@ -61,30 +67,16 @@ const ProjectSummary = props => {
     name,
     start,
     logo,
-    link,
-    showLink
+    plain,
   } = props
   const startDate = moment(start, 'M-D-YYYY')
-  const startString = startDate.format('MMM Do, YYYY')
+  const startString = startDate.format('MMM YYYY')
   return (
-    <div className={[classes.container, className].join(' ')}>
+    <div className={[classes.container, plain ? classes.plain : '', className].join(' ')}>
       <CircularImage src={logo} size={100} />
       <div className={classes.info}>
         <div className={classes.company}>
           {name}
-          {
-            (showLink && link) && (
-              <a
-                className={classes.externalLink}
-                href={link}
-                rel="noopener noreferrer"
-                target="_blank"
-                onClick={() => window.open(link)}
-              >
-                <Icon name="external-link-alt" size={16} />
-              </a>
-            )
-          }
         </div>
         <div className={classes.extrainfo}>
           <Icon name="calendar-alt" size={14} /> {startString}
@@ -100,8 +92,7 @@ ProjectSummary.propTypes ={
   name: PropTypes.string,
   start: PropTypes.string,
   logo: PropTypes.string,
-  link: PropTypes.string,
-  showLink: PropTypes.bool
+  plain: PropTypes.bool
 }
 
 export default injectSheet(styles)(ProjectSummary)

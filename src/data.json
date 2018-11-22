@@ -2,7 +2,7 @@
   "experiences": {
     "pinterest": {
       "name": "Pinterest",
-      "description": "PIN DESC",
+      "description": "",
       "location": "San Francisco, CA",
       "position": "Software Engineer - Analytics Platform",
       "start": "9-24-2018",
@@ -15,7 +15,7 @@
     },
     "carelinx": {
       "name": "CareLinx",
-      "description": "CLX DESC",
+      "description": "",
       "location": "San Bruno, CA",
       "position": "Fullstack Engineer",
       "start": "6-19-2017",
@@ -28,7 +28,7 @@
     },
     "cegsoft": {
       "name": "CEGsoft",
-      "description": "CEG DESC",
+      "description": "",
       "location": "Guaynabo, PR",
       "position": "Software Engineer - Intern",
       "start": "9-1-2016",
@@ -41,7 +41,7 @@
     },
     "usf_nsf_reu": {
       "name": "USF NSF REU",
-      "description": "USF DESC",
+      "description": "",
       "location": "Tampa, FL",
       "position": "Research Intern",
       "start": "5-25-2016",
@@ -54,84 +54,282 @@
     }
   },
   "projects": {
+    "makeameal": {
+      "name": "Make-A-Meal",
+      "description": "",
+      "start": "10-1-2017",
+      "backgroundColor": "#282828",
+      "foregroundColor": "#6DC25B",
+      "logo": "/images/make-a-meal_logo.png",
+      "icon": "makeameal",
+      "gitLink": "https://github.com/Make-A-Meal"
+    },
+    "clockio": {
+      "name": "ClockIO",
+      "description": "",
+      "start": "5-1-2018",
+      "backgroundColor": "#0090FF",
+      "foregroundColor": "#FFFFFF",
+      "logo": "/images/clockio_logo.png",
+      "icon": "clock",
+      "link": "https://clockio.online",
+      "gitLink": "https://github.com/ClockIO"
+    },
+    "simplefinanceapp": {
+      "name": "SimpleFinance.App",
+      "description": "SFA DESC",
+      "start": "9-1-2018",
+      "backgroundColor": "#66bb6a",
+      "foregroundColor": "#FFFFFF",
+      "logo": "/images/no_logo.png",
+      "icon": "dollar-sign",
+      "link": "https://simplefinance.app",
+      "gitLink": "https://github.com/juanjalvarez/SimpleFinance.App"
+    }
   },
   "skills": {
     "javascript": {
       "name": "JavaScript",
-      "description": "JS DESC",
+      "description": "",
       "start": "9-1-2016",
       "backgroundColor": "#ffe558",
       "foregroundColor": "#000000",
       "icon": "js",
-      "proficient": true,
+      "proficiency": 3,
       "logo": "/images/js_logo.png",
       "link": "https://www.javascript.com/"
     },
     "python": {
       "name": "Python",
-      "description": "PY DESC",
+      "description": "",
       "start": "6-19-2017",
       "backgroundColor": "#2B5B84",
       "foregroundColor": "#ffffff",
       "icon": "python",
-      "proficient": true,
+      "proficiency": 2,
       "logo": "/images/python_logo.png",
       "link": "https://www.python.org/"
     },
     "flask": {
       "name": "Flask",
-      "description": "FLASK DESC",
+      "description": "",
       "start": "9-24-2018",
       "backgroundColor": "#000000",
       "foregroundColor": "#ffffff",
       "icon": "python",
-      "proficient": false,
+      "proficiency": 2,
       "logo": "/images/flask_logo.png",
       "link": "http://flask.pocoo.org/"
     },
     "django": {
       "name": "Django",
-      "description": "DJANGO DESC",
+      "description": "",
       "start": "6-19-2017",
       "backgroundColor": "#0C3C26",
       "foregroundColor": "#ffffff",
       "icon": "python",
-      "proficient": false,
+      "proficiency": 2,
       "logo": "/images/python_logo.png",
       "link": "https://www.djangoproject.com/"
     },
     "csharp": {
       "name": "Visual C#",
-      "description": "C# DESC",
+      "description": "",
       "start": "9-1-2016",
       "backgroundColor": "#512bd4",
       "foregroundColor": "#ffffff",
       "icon": "csharp",
-      "proficient": false,
+      "proficiency": 1,
       "logo": "/images/csharp_logo.png",
       "link": "https://docs.microsoft.com/en-us/dotnet/csharp/"
     },
     "java": {
       "name": "Java",
-      "description": "JAVA DESC",
+      "description": "",
       "start": "6-1-2014",
       "backgroundColor": "#f80000",
       "foregroundColor": "#ffffff",
       "icon": "java",
-      "proficient": true,
+      "proficiency": 1,
       "logo": "/images/java_logo.png",
       "link": "https://www.oracle.com/java/"
+    },
+    "typescript": {
+      "name": "TypeScript",
+      "description": "",
+      "start": "10-1-2016",
+      "backgroundColor": "#265988",
+      "foregroundColor": "#ffffff",
+      "icon": "ts",
+      "proficiency": 2,
+      "logo": "/images/typescript_logo.png",
+      "link": "https://www.typescriptlang.org/"
+    },
+    "react": {
+      "name": "React",
+      "description": "",
+      "start": "5-1-2017",
+      "backgroundColor": "#20232a",
+      "foregroundColor": "#61dafb",
+      "icon": "react",
+      "proficiency": 3,
+      "logo": "/images/react_logo.png",
+      "link": "https://reactjs.org/"
+    },
+    "nginx": {
+      "name": "NGiNX",
+      "description": "",
+      "start": "8-1-2017",
+      "backgroundColor": "#20232a",
+      "foregroundColor": "#009639",
+      "icon": "server",
+      "proficiency": 2,
+      "logo": "/images/nginx_logo.jpg",
+      "link": "https://www.nginx.com/"
+    },
+    "graphql": {
+      "name": "GraphQL",
+      "description": "",
+      "start": "10-1-2017",
+      "backgroundColor": "#3d464f",
+      "foregroundColor": "#E10098",
+      "icon": "graphql",
+      "proficiency": 2,
+      "logo": "/images/graphql_logo.png",
+      "link": "https://graphql.org/"
+    },
+    "redux": {
+      "name": "Redux",
+      "description": "",
+      "start": "6-1-2017",
+      "backgroundColor": "#744cbc",
+      "foregroundColor": "#ffffff",
+      "icon": "redux",
+      "proficiency": 3,
+      "logo": "/images/redux_logo.png",
+      "link": "https://redux.js.org/"
+    },
+    "nodejs": {
+      "name": "node.js",
+      "description": "",
+      "start": "9-1-2016",
+      "backgroundColor": "#303030",
+      "foregroundColor": "#169e1f",
+      "icon": "node-js",
+      "proficiency": 3,
+      "logo": "/images/nodejs_logo.png",
+      "link": "https://nodejs.org/en/"
+    },
+    "expressjs": {
+      "name": "Express",
+      "description": "",
+      "start": "9-1-2016",
+      "backgroundColor": "#e0e0e0",
+      "foregroundColor": "#000000",
+      "icon": "node-js",
+      "proficiency": 2,
+      "logo": "/images/nodejs_logo.png",
+      "link": "https://expressjs.com/"
+    },
+    "angularjs": {
+      "name": "Angular",
+      "description": "",
+      "start": "9-1-2016",
+      "backgroundColor": "#ff0000",
+      "foregroundColor": "#ffffff",
+      "icon": "angular",
+      "proficiency": 1,
+      "logo": "/images/angular_logo.png",
+      "link": "https://expressjs.com/"
+    },
+    "go": {
+      "name": "Go",
+      "description": "",
+      "start": "4-1-2017",
+      "backgroundColor": "#E0EBF5",
+      "foregroundColor": "#000000",
+      "icon": "go",
+      "proficiency": 2,
+      "logo": "/images/go_logo.png",
+      "link": "https://golang.org/"
+    },
+    "postgresql": {
+      "name": "PostgreSQL",
+      "description": "",
+      "start": "6-1-2017",
+      "backgroundColor": "#336791",
+      "foregroundColor": "#ffffff",
+      "icon": "postgresql",
+      "proficiency": 1,
+      "logo": "/images/postgresql_logo.png",
+      "link": "https://www.postgresql.org/"
+    },
+    "redis": {
+      "name": "Redis",
+      "description": "",
+      "start": "7-1-2018",
+      "backgroundColor": "#222222",
+      "foregroundColor": "#ff4444",
+      "icon": "redis",
+      "proficiency": 1,
+      "logo": "/images/redis_logo.png",
+      "link": "https://redis.io/"
+    },
+    "docker": {
+      "name": "Docker",
+      "description": "",
+      "start": "4-1-2017",
+      "backgroundColor": "#007bff",
+      "foregroundColor": "#ffffff",
+      "icon": "docker",
+      "proficiency": 2,
+      "logo": "/images/docker_logo.png",
+      "link": "https://www.docker.com/"
     }
   },
   "experienceSkills": [
     ["carelinx", "javascript"],
+    ["carelinx", "react"],
     ["carelinx", "python"],
     ["carelinx", "django"],
+    ["carelinx", "nginx"],
+    ["carelinx", "redux"],
+    ["carelinx", "postgresql"],
+
     ["pinterest", "javascript"],
+    ["pinterest", "react"],
     ["pinterest", "python"],
     ["pinterest", "flask"],
+    ["pinterest", "nginx"],
+    ["pinterest", "redux"],
+    ["pinterest", "docker"],
+
     ["cegsoft", "javascript"],
+    ["cegsoft", "angularjs"],
     ["cegsoft", "csharp"],
+
     ["usf_nsf_reu", "java"]
+  ],
+  "projectSkills": [
+    ["makeameal", "typescript"],
+    ["makeameal", "javascript"],
+    ["makeameal", "react"],
+    ["makeameal", "graphql"],
+    ["makeameal", "nodejs"],
+    ["makeameal", "expressjs"],
+    ["makeameal", "nginx"],
+    ["makeameal", "redux"],
+    ["makeameal", "docker"],
+
+    ["simplefinanceapp", "react"],
+    ["simplefinanceapp", "javascript"],
+    ["simplefinanceapp", "docker"],
+
+    ["clockio", "react"],
+    ["clockio", "javascript"],
+    ["clockio", "go"],
+    ["clockio", "redis"],
+    ["clockio", "postgresql"],
+    ["clockio", "docker"]
   ]
 }

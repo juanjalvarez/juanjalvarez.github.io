@@ -47,8 +47,9 @@ const styles = {
 const Skills = ({
   classes
 }) => {
-  const proficientSkills = skills.filter(skill => skill.proficient)
-  const otherSkills = skills.filter(skill => !skill.proficient)
+  const proficientSkills = skills.filter(skill => skill.proficiency === 3)
+  const familiarSkills = skills.filter(skill => skill.proficiency === 2)
+  const otherSkills = skills.filter(skill => skill.proficiency === 1)
   return (
     <div className={classes.container}>
       <Route path="/skills/:skillId" component={SkillModal} />
@@ -59,6 +60,18 @@ const Skills = ({
           <div className={classes.sectionBody}>
             {
               proficientSkills.map(skill => (
+                <Link key={skill.id} to={`/skills/${skill.id}`}>
+                  <SkillIcon {...skill} />
+                </Link>
+              ))
+            }
+          </div>
+        </div>
+        <div className={classes.skillSection}>
+          <div className={classes.sectionTitle}>Familiar Skills</div>
+          <div className={classes.sectionBody}>
+            {
+              familiarSkills.map(skill => (
                 <Link key={skill.id} to={`/skills/${skill.id}`}>
                   <SkillIcon {...skill} />
                 </Link>

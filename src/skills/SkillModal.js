@@ -92,7 +92,25 @@ const ExperienceModal = props => {
     .map(experienceSkill => ({
       id: experienceSkill[0],
       ...data['experiences'][experienceSkill[0]]
-    }))
+    })).map(experience => (
+      <Tag
+        key={experience.id}
+        {...experience}
+        link={`/experience/${experience.id}`}
+      />
+    ))
+  const relatedProjects = data['projectSkills']
+    .filter(projectSkill => projectSkill[1] === skillId)
+    .map(projectSkill => ({
+      id: projectSkill[0],
+      ...data['projects'][projectSkill[0]]
+    })).map(project => (
+      <Tag
+        key={project.id}
+        {...project}
+        link={`/projects/${project.id}`}
+      />
+    ))
   return (
     <Modal
       onOutsideClick={() => props.history.push('/skills')}
@@ -125,15 +143,8 @@ const ExperienceModal = props => {
         )
       }
       <div className={classes.tagContainer}>
-        {
-          relatedExperiences.map(experience => (
-            <Tag
-              key={experience.id}
-              {...experience}
-              link={`/experience/${experience.id}`}
-            />
-          ))
-        }
+        {relatedExperiences}
+        {relatedProjects}
       </div>
     </Modal>
   )

@@ -8,7 +8,7 @@ import { connectRouter, routerMiddleware, ConnectedRouter } from 'connected-reac
 
 import Layout from './Layout'
 
-import rootReducer from './reducer'
+import rootReducer from '../reducer'
 import theme from '../theme'
 import analytics from '../utils/analytics'
 import './app.css'

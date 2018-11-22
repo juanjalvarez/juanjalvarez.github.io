@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import { Switch, Route } from 'react-router-dom'
+import moment from 'moment'
+import { connect } from 'react-redux'
 
 import Experiences from '../experience/Experiences'
 import Projects from '../projects/Projects'
@@ -18,7 +20,7 @@ const styles = theme => ({
     overflowY: 'scroll'
   },
   children: {
-    animation: 'fadein-quick 3s forwards',
+    animation: props => props.alreadyAnimatedToday ? '' : 'fadein-quick 3s forwards',
     height: '100%'
   },
   '@keyframes fadein-quick': {
@@ -54,4 +56,10 @@ Layout.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default injectSheet(styles)(Layout)
+const mapStateToProps = state => ({
+  alreadyAnimatedToday: state.app.lastAccessed === moment().format('YYYY-MM-DD')
+})
+
+export default connect(mapStateToProps)(
+  injectSheet(styles)(Layout)
+)
