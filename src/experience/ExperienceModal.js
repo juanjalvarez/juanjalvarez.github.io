@@ -55,6 +55,8 @@ const ExperienceModal = props => {
           </div>
         )
       }
+      <br />
+      <h3>Relevant Skills</h3>
       <div className={classes.tagContainer}>
         {
           skills.map(skill => (

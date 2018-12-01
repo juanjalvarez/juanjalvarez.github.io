@@ -1,16 +1,15 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import { Switch, Route } from 'react-router-dom'
-import moment from 'moment'
 import { connect } from 'react-redux'
-
-import Experiences from '../experience/Experiences'
-import Projects from '../projects/Projects'
-import Skills from '../skills/Skills'
 
 import Blur from '../components/Blur'
 import Nav from '../sidebar/Nav'
+
+const Projects = lazy(() => import('../projects/Projects'))
+const Experiences = lazy(() => import('../experience/Experiences'))
+const Skills = lazy(() => import('../skills/Skills'))
 
 const styles = theme => ({
   container: {
@@ -20,7 +19,7 @@ const styles = theme => ({
     overflowY: 'scroll'
   },
   children: {
-    animation: props => props.alreadyAnimatedToday ? '' : 'fadein-quick 3s forwards',
+    animation: props => props.shouldRenderInitialAnimation ? 'fadein-quick 3s forwards' : '',
     height: '100%'
   },
   '@keyframes fadein-quick': {
@@ -42,11 +41,13 @@ const Layout = ({
   <div className={classes.container}>
     <Nav />
     <Blur className={classes.children}>
-      <Switch>
-        <Route path="/projects" component={Projects} />
-        <Route path="/experience" component={Experiences} />
-        <Route path="/skills" component={Skills} />
-      </Switch>
+      <Suspense fallback={null}>
+        <Switch>
+          <Route path="/projects" component={Projects} />
+          <Route path="/experience" component={Experiences} />
+          <Route path="/skills" component={Skills} />
+        </Switch>
+      </Suspense>
     </Blur>
   </div>
 )
@@ -57,7 +58,7 @@ Layout.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  alreadyAnimatedToday: state.app.lastAccessed === moment().format('YYYY-MM-DD')
+  shouldRenderInitialAnimation: state.app.shouldRenderInitialAnimation
 })
 
 export default connect(mapStateToProps)(

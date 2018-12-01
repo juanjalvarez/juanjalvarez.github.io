@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
+import { connect } from 'react-redux'
 
 import Icon from '../components/Icon'
 import ProfilePicture from './ProfilePicture'
@@ -8,8 +9,6 @@ import NavItem from './NavItem'
 
 const styles = {
   container: {
-  },
-  wrapper: {
     backgroundColor: 'white',
     position: 'fixed',
     top: 30,
@@ -29,18 +28,18 @@ const styles = {
       top: 0,
       right: 0,
       width: '100%',
-      height: '100%'
-    }
+      height: '100%',
+    },
   },
   photo: {
     marginBottom: 50,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   navItem: {
     marginBottom: 30,
     '&:last-child': {
-      marginBottom: 0
-    }
+      marginBottom: 0,
+    },
   },
   options: {
     minWidth: 50,
@@ -48,18 +47,18 @@ const styles = {
     cursor: 'pointer',
     '&:hover': {
       animation: 'infinite-rotate 4s infinite',
-      animationTimingFunction: 'linear'
-    }
+      animationTimingFunction: 'linear',
+    },
   },
   navIcons: {
-    marginBottom: 30
+    marginBottom: 30,
   },
   navIconRow: {
     display: 'flex',
     marginBottom: 15,
     '&:last-child': {
-      marginBottom: 0
-    }
+      marginBottom: 0,
+    },
   },
   navIconLink: {
     marginRight: 15,
@@ -67,38 +66,68 @@ const styles = {
     height: 50,
     transitionDuration: '0.1s',
     '&:hover': {
-      transform: 'scale(1.2)'
+      transform: 'scale(1.2)',
     },
     '&:last-child': {
-      marginRight: 0
-    }
+      marginRight: 0,
+    },
+  },
+  activePage: {
+    fontWeight: 'bold',
   },
   '@keyframes infinite-rotate': {
     from: {
-      transform: 'rotate(0deg)'
+      transform: 'rotate(0deg)',
     },
     to: {
-      transform: 'rotate(360deg)'
-    }
+      transform: 'rotate(360deg)',
+    },
   },
-  '@keyframes circular-expand': {
-  }
 }
 
-const OpenNav = props => {
-  const {
-    classes,
-    className,
-    onToggleSidebar
-  } = props
-  return (
-    <div className={classes.container}>
-      <div className={[classes.wrapper, className].join(' ')}>
+class OpenNav extends PureComponent {
+
+  static propTypes = {
+    classes: PropTypes.object.isRequired,
+    className: PropTypes.string,
+    onToggleSidebar: PropTypes.func,
+    activePage: PropTypes.string,
+  }
+
+  render = () => {
+    const {
+      classes,
+      className,
+      onToggleSidebar,
+      activePage,
+    } = this.props
+    return (
+      <div className={[classes.container, className].join(' ')}>
         <ProfilePicture className={classes.photo} onClick={onToggleSidebar} />
-        <NavItem className={classes.navItem} to="/about">About</NavItem>
-        <NavItem className={classes.navItem} to="/experience">Experience</NavItem>
-        <NavItem className={classes.navItem} to="/skills">Skills</NavItem>
-        <NavItem className={classes.navItem} to="/projects">Projects</NavItem>
+        <NavItem
+          className={[classes.navItem, activePage === 'About' ? classes.activePage : null].join(' ')}
+          to="/about"
+        >
+          About
+        </NavItem>
+        <NavItem
+          className={[classes.navItem, activePage === 'Experiences' ? classes.activePage : null].join(' ')}
+          to="/experience"
+        >
+          Experience
+        </NavItem>
+        <NavItem
+          className={[classes.navItem, activePage === 'Skills' ? classes.activePage : null].join(' ')}
+          to="/skills"
+        >
+          Skills
+        </NavItem>
+        <NavItem
+          className={[classes.navItem, activePage === 'Projects' ? classes.activePage : null].join(' ')}
+          to="/projects"
+        >
+          Projects
+        </NavItem>
         <div className={classes.navIcons}>
           <div className={classes.navIconRow}>
             <a
@@ -139,14 +168,14 @@ const OpenNav = props => {
         </div>
         <Icon className={classes.options} name="cog" size={50} />
       </div>
-    </div>
-  )
+    )
+  }
 }
 
-OpenNav.propTypes = {
-  classes: PropTypes.object.isRequired,
-  className: PropTypes.string,
-  onToggleSidebar: PropTypes.func
-}
+const mapStateToProps = state => ({
+  activePage: state.app.activePage
+})
 
-export default injectSheet(styles)(OpenNav)
+export default connect(mapStateToProps)(
+  injectSheet(styles)(OpenNav)
+)

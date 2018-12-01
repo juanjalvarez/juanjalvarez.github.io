@@ -8,11 +8,6 @@ import Overlay from './Overlay'
 
 import * as appActions from '../app/actions'
 
-let loaded = false
-setTimeout(() => {
-  loaded = true
-}, 3000)
-
 const styles = {
   container: {
     width: '100vw',
@@ -21,7 +16,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    animation: () => loaded ? 'fadein 0.2s forwards' : 'fadein-quick 3s forwards',
+    animation: props => props.shouldRenderInitialAnimation ? 'fadein-quick 3s forwards' : 'fadein 0.2s forwards',
     opacity: 0
   },
   body: {
@@ -33,7 +28,8 @@ const styles = {
     boxShadow: '0px 4px 30px rgba(0, 0, 0,25%)',
     margin: 20,
     padding: 30,
-    borderRadius: 10
+    borderRadius: 10,
+    overflowY: 'scroll',
   },
   '@keyframes fadein': {
     from: {
@@ -91,8 +87,12 @@ class Modal extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  shouldRenderInitialAnimation: state.app.shouldRenderInitialAnimation,
+})
+
 const mapActionsToProps = dispatch => bindActionCreators(appActions, dispatch)
 
-export default connect(null, mapActionsToProps)(
+export default connect(mapStateToProps, mapActionsToProps)(
   injectSheet(styles)(Modal)
 )

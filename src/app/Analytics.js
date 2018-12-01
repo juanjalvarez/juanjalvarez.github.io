@@ -2,7 +2,7 @@ import { Component } from 'react'
 import PropTypes from 'prop-types'
 import analytics from '../utils/analytics'
 
-const analyticsEnabled = Boolean(process.env['REACT_APP_ANALYTICS_ENABLED'])
+const analyticsEnabled = process.env['REACT_APP_ANALYTICS_ENABLED'] === 'true'
 
 const pageview = path => {
   if (analyticsEnabled) {

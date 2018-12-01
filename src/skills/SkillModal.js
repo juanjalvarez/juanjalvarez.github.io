@@ -142,6 +142,8 @@ const ExperienceModal = props => {
           </div>
         )
       }
+      <br />
+      <h3>Relevant Projects & Experiences</h3>
       <div className={classes.tagContainer}>
         {relatedExperiences}
         {relatedProjects}

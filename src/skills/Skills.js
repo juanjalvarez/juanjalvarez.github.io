@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import { Link, Route } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import SkillIcon from './SkillIcon'
 import Spacing from '../components/Spacing'
 import SkillModal from './SkillModal'
+
+import * as appActions from '../app/actions'
 
 import data from '../data.json'
 
@@ -44,61 +48,72 @@ const styles = {
   }
 }
 
-const Skills = ({
-  classes
-}) => {
-  const proficientSkills = skills.filter(skill => skill.proficiency === 3)
-  const familiarSkills = skills.filter(skill => skill.proficiency === 2)
-  const otherSkills = skills.filter(skill => skill.proficiency === 1)
-  return (
-    <div className={classes.container}>
-      <Route path="/skills/:skillId" component={SkillModal} />
-      <div className={classes.body}>
-        <Spacing height="10%" />
-        <div className={classes.skillSection}>
-          <div className={classes.sectionTitle}>Proficient Skills</div>
-          <div className={classes.sectionBody}>
-            {
-              proficientSkills.map(skill => (
-                <Link key={skill.id} to={`/skills/${skill.id}`}>
-                  <SkillIcon {...skill} />
-                </Link>
-              ))
-            }
+class Skills extends PureComponent {
+
+  static propTypes = {
+    classes: PropTypes.object.isRequired,
+    setActivePage: PropTypes.func.isRequired,
+  }
+
+  componentDidMount = () => this.props.setActivePage('Skills')
+
+  render = () => {
+    const {
+      classes,
+    } = this.props
+    const proficientSkills = skills.filter(skill => skill.proficiency === 3)
+    const familiarSkills = skills.filter(skill => skill.proficiency === 2)
+    const otherSkills = skills.filter(skill => skill.proficiency === 1)
+    return (
+      <div className={classes.container}>
+        <Route path="/skills/:skillId" component={SkillModal} />
+        <div className={classes.body}>
+          <Spacing height="10%" />
+          <div className={classes.skillSection}>
+            <div className={classes.sectionTitle}>Proficient Skills</div>
+            <div className={classes.sectionBody}>
+              {
+                proficientSkills.map(skill => (
+                  <Link key={skill.id} to={`/skills/${skill.id}`}>
+                    <SkillIcon {...skill} />
+                  </Link>
+                ))
+              }
+            </div>
           </div>
-        </div>
-        <div className={classes.skillSection}>
-          <div className={classes.sectionTitle}>Familiar Skills</div>
-          <div className={classes.sectionBody}>
-            {
-              familiarSkills.map(skill => (
-                <Link key={skill.id} to={`/skills/${skill.id}`}>
-                  <SkillIcon {...skill} />
-                </Link>
-              ))
-            }
+          <div className={classes.skillSection}>
+            <div className={classes.sectionTitle}>Familiar Skills</div>
+            <div className={classes.sectionBody}>
+              {
+                familiarSkills.map(skill => (
+                  <Link key={skill.id} to={`/skills/${skill.id}`}>
+                    <SkillIcon {...skill} />
+                  </Link>
+                ))
+              }
+            </div>
           </div>
-        </div>
-        <div className={classes.skillSection}>
-          <div className={classes.sectionTitle}>Other Skills</div>
-          <div className={classes.sectionBody}>
-            {
-              otherSkills.map(skill => (
-                <Link key={skill.id} to={`/skills/${skill.id}`}>
-                  <SkillIcon {...skill} />
-                </Link>
-              ))
-            }
+          <div className={classes.skillSection}>
+            <div className={classes.sectionTitle}>Other Skills</div>
+            <div className={classes.sectionBody}>
+              {
+                otherSkills.map(skill => (
+                  <Link key={skill.id} to={`/skills/${skill.id}`}>
+                    <SkillIcon {...skill} />
+                  </Link>
+                ))
+              }
+            </div>
           </div>
+          <Spacing height={200} />
         </div>
-        <Spacing height={200} />
       </div>
-    </div>
-  )
+    )
+  }
 }
 
-Skills.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
+const mapDispatchToProps = dispatch => bindActionCreators(appActions, dispatch)
 
-export default injectSheet(styles)(Skills)
+export default connect(null, mapDispatchToProps)(
+  injectSheet(styles)(Skills)
+)

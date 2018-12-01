@@ -1,10 +1,9 @@
 import React, { PureComponent } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Router } from 'react-router-dom'
 import { ThemeProvider } from 'react-jss'
-import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
+import { createStore, combineReducers, compose } from 'redux'
 import { Provider } from 'react-redux'
 import { createBrowserHistory } from 'history'
-import { connectRouter, routerMiddleware, ConnectedRouter } from 'connected-react-router'
 
 import Layout from './Layout'
 
@@ -27,18 +26,15 @@ history.listen(location => {
   pageview(location.pathname)
 })
 
-const enhancers = [
-  applyMiddleware(routerMiddleware(history))
-]
+const enhancers = []
 const reduxDevTools = window['__REDUX_DEVTOOLS_EXTENSION__']
 if (reduxDevTools) {
   enhancers.push(reduxDevTools())
 }
+
 const combinedReducers = combineReducers(rootReducer)
-const store = createStore(
-  connectRouter(history)(combinedReducers),
-  compose(...enhancers)
-)
+
+const store = createStore(combinedReducers, {}, compose(...enhancers))
 
 class App extends PureComponent {
 
@@ -55,11 +51,11 @@ class App extends PureComponent {
   render() {
     return (
       <Provider store={store}>
-        <ConnectedRouter history={history}>
+        <Router history={history}>
           <ThemeProvider theme={theme}>
             <Route path="/" component={Layout} />
           </ThemeProvider>
-        </ConnectedRouter>
+        </Router>
       </Provider>
     )
   }
