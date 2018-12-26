@@ -62,14 +62,14 @@ class Experiences extends PureComponent {
       <div className={classes.container}>
         <Route path="/experience/:experienceId" component={ExperienceModal} />
         <div className={classes.body}>
-          <Spacing with="100%" height="10%" />
+          <Spacing with="100%" height={window.innerWidth < 501 ? 120 : '5%'} />
           <IconButton
             className={classes.linkedinLink}
             background="#0073b1"
             icon="linkedin"
             onClick={() => window.open(data.links.linkedin)}
           >
-            View LinkedIn
+            View LinkedIn Profile
           </IconButton>
           {
             Object.keys(experiences).map(key => {

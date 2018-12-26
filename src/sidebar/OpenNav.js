@@ -36,6 +36,11 @@ const styles = {
   photo: {
     marginBottom: 50,
     cursor: 'pointer',
+    transitionDuration: '0.1s',
+    '&:hover': {
+      transform: 'scale(1.1)',
+      transitionDuration: '0.1s',
+    },
   },
   navItem: {
     marginBottom: 30,

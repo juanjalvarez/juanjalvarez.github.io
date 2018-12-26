@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+
+import * as actions from '../app/actions'
 
 import ClosedNav from './ClosedNav'
 import OpenNav from './OpenNav'
@@ -17,33 +21,35 @@ const styles = {
 class Nav extends Component {
 
   static propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    isNavOpen: PropTypes.bool.isRequired,
+    setIsNavOpen: PropTypes.func.isRequired,
   }
 
   state = {
-    isOpen: false,
-    firstOpened: false
+    firstOpened: false,
   }
 
   handleToggleSidebar = () => {
+    const { setIsNavOpen, isNavOpen } = this.props
     this.setState({
-      isOpen: !this.state.isOpen,
       firstOpened: true
     })
+    setIsNavOpen(!isNavOpen)
   }
 
   render() {
     const {
-      classes
+      classes,
+      isNavOpen,
     } = this.props
     const {
-      isOpen,
       firstOpened
     } = this.state
     return (
       <nav className={classes.container}>
         {
-          isOpen ? (
+          isNavOpen ? (
             <OpenNav onToggleSidebar={this.handleToggleSidebar} />
           ) : (
             <ClosedNav onToggleSidebar={this.handleToggleSidebar} shouldRenderAnimation={!firstOpened} />
@@ -54,4 +60,12 @@ class Nav extends Component {
   }
 }
 
-export default injectSheet(styles)(Nav)
+const mapStateToProps = state => ({
+  isNavOpen: state.app.isNavOpen,
+})
+
+const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(
+  injectSheet(styles)(Nav)
+)

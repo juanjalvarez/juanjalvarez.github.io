@@ -68,7 +68,7 @@ class Skills extends PureComponent {
       <div className={classes.container}>
         <Route path="/skills/:skillId" component={SkillModal} />
         <div className={classes.body}>
-          <Spacing height="10%" />
+          <Spacing with="100%" height={window.innerWidth < 501 ? 120 : '5%'} />
           <div className={classes.skillSection}>
             <div className={classes.sectionTitle}>Proficient Skills</div>
             <div className={classes.sectionBody}>

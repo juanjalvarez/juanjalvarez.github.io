@@ -62,8 +62,8 @@ class Projects extends PureComponent {
       <div className={classes.container}>
         <Route path="/projects/:projectId" component={ProjectModal} />
         <div className={classes.body}>
-          <Spacing with="100%" height="10%" />
-          <IconButton className={classes.githubLink} icon="github" onClick={() => window.open(data.links.github)}>View Code</IconButton>
+          <Spacing with="100%" height={window.innerWidth < 501 ? 120 : '5%'} />
+          <IconButton className={classes.githubLink} icon="github" onClick={() => window.open(data.links.github)}>View GitHub Profile</IconButton>
           {
             Object.keys(projects).map(key => {
               const project = projects[key]

@@ -109,7 +109,7 @@
       "foregroundColor": "#ffffff",
       "logo": "/images/no_logo.png",
       "logoScale": 0.5,
-      "icon": "makeameal"
+      "icon": "server"
     },
     "poseidon": {
       "name": "Poseidon Bot",

@@ -12,6 +12,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'white',
   }),
   image: props => ({
     width: '100%',

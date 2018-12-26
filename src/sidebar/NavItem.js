@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
-import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+
+import * as actions from '../app/actions'
 
 const styles = {
   container: {
@@ -14,20 +18,42 @@ const styles = {
   }
 }
 
-const NavItem = ({
-  classes,
-  className,
-  children,
-  to
-}) => (
-  <Link to={to} className={[classes.container, className].join(' ')}>{children}</Link>
-)
+class NavItem extends PureComponent {
 
-NavItem.propTypes = {
-  classes: PropTypes.object.isRequired,
-  className: PropTypes.string,
-  children: PropTypes.any.isRequired,
-  to: PropTypes.string
+  static propTypes = {
+    classes: PropTypes.object.isRequired,
+    className: PropTypes.string,
+    children: PropTypes.any.isRequired,
+    to: PropTypes.string,
+    history: PropTypes.object.isRequired,
+    setIsNavOpen: PropTypes.func.isRequired,
+  }
+
+  handleClick = e => {
+    e.preventDefault()
+    const{ history, to, setIsNavOpen } = this.props
+    history.push(to)
+    if (window.innerWidth < 501) {
+      setIsNavOpen(false)
+    }
+  }
+
+  render() {
+    const {
+      classes,
+      className,
+      children,
+    } = this.props
+    return (
+      <a onClick={this.handleClick} className={[classes.container, className].join(' ')}>{children}</a>
+    )
+  }
 }
 
-export default injectSheet(styles)(NavItem)
+const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch)
+
+export default connect(null, mapDispatchToProps)(
+  withRouter(
+    injectSheet(styles)(NavItem)
+  )
+)
