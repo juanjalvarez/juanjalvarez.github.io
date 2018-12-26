@@ -9,7 +9,6 @@ import CircularImage from '../components/CircularImage'
 const styles = {
   container: {
     padding: 30,
-    margin: 20,
     boxShadow: '0px 4px 30px rgba(0, 0, 0,25%)',
     borderRadius: 10,
     display: 'flex',
@@ -36,7 +35,6 @@ const styles = {
     display: 'flex'
   },
   plain: {
-    margin: 0,
     boxShadow: 'none',
     borderRadius: 0,
     padding: 0
@@ -68,12 +66,13 @@ const ProjectSummary = props => {
     start,
     logo,
     plain,
+    logoScale,
   } = props
   const startDate = moment(start, 'M-D-YYYY')
   const startString = startDate.format('MMM YYYY')
   return (
     <div className={[classes.container, plain ? classes.plain : '', className].join(' ')}>
-      <CircularImage src={logo} size={100} />
+      <CircularImage src={logo} size={100} scale={logoScale} />
       <div className={classes.info}>
         <div className={classes.company}>
           {name}
@@ -92,7 +91,8 @@ ProjectSummary.propTypes ={
   name: PropTypes.string,
   start: PropTypes.string,
   logo: PropTypes.string,
-  plain: PropTypes.bool
+  plain: PropTypes.bool,
+  logoScale: PropTypes.number,
 }
 
 export default injectSheet(styles)(ProjectSummary)

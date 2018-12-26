@@ -54,16 +54,6 @@
     }
   },
   "projects": {
-    "makeameal": {
-      "name": "Make-A-Meal",
-      "description": "",
-      "start": "10-1-2017",
-      "backgroundColor": "#282828",
-      "foregroundColor": "#6DC25B",
-      "logo": "/images/make-a-meal_logo.png",
-      "icon": "makeameal",
-      "gitLink": "https://github.com/Make-A-Meal"
-    },
     "clockio": {
       "name": "ClockIO",
       "description": "",
@@ -71,6 +61,7 @@
       "backgroundColor": "#0090FF",
       "foregroundColor": "#FFFFFF",
       "logo": "/images/clockio_logo.png",
+      "logoScale": 1.5,
       "icon": "clock",
       "link": "https://clockio.online",
       "gitLink": "https://github.com/ClockIO"
@@ -82,9 +73,54 @@
       "backgroundColor": "#66bb6a",
       "foregroundColor": "#FFFFFF",
       "logo": "/images/no_logo.png",
+      "logoScale": 0.5,
       "icon": "dollar-sign",
       "link": "https://simplefinance.app",
       "gitLink": "https://github.com/juanjalvarez/SimpleFinance.App"
+    },
+    "gameoflife": {
+      "name": "Game Of Life",
+      "description": "GOL DESC",
+      "start": "6-1-2018",
+      "backgroundColor": "#000000",
+      "foregroundColor": "#FFFFFF",
+      "logo": "/images/no_logo.png",
+      "logoScale": 0.5,
+      "icon": "tree-alt",
+      "link": "https://conway.juanjalvarez.me/",
+      "gitLink": "https://github.com/juanjalvarez/InfiniteGameOfLife"
+    },
+    "makeameal": {
+      "name": "Make-A-Meal",
+      "description": "",
+      "start": "10-1-2017",
+      "backgroundColor": "#282828",
+      "foregroundColor": "#6DC25B",
+      "logo": "/images/make-a-meal_logo.png",
+      "logoScale": 0.7,
+      "icon": "makeameal",
+      "gitLink": "https://github.com/Make-A-Meal"
+    },
+    "homelab": {
+      "name": "Homelab",
+      "description": "",
+      "start": "12-1-2016",
+      "backgroundColor": "#000000",
+      "foregroundColor": "#ffffff",
+      "logo": "/images/no_logo.png",
+      "logoScale": 0.5,
+      "icon": "makeameal"
+    },
+    "poseidon": {
+      "name": "Poseidon Bot",
+      "description": "TPB DESC",
+      "start": "12-21-2016",
+      "backgroundColor": "#000000",
+      "foregroundColor": "#FFFFFF",
+      "logo": "/images/poseidon_logo.jpg",
+      "logoScale": 0.5,
+      "icon": "tint",
+      "gitLink": "https://github.com/juanjalvarez/PoseidonBot"
     }
   },
   "skills": {
@@ -108,6 +144,7 @@
       "icon": "python",
       "proficiency": 2,
       "logo": "/images/python_logo.png",
+      "logoScale": 0.8,
       "link": "https://www.python.org/"
     },
     "flask": {
@@ -119,6 +156,7 @@
       "icon": "python",
       "proficiency": 2,
       "logo": "/images/flask_logo.png",
+      "logoScale": 0.6,
       "link": "http://flask.pocoo.org/"
     },
     "django": {
@@ -130,6 +168,7 @@
       "icon": "python",
       "proficiency": 2,
       "logo": "/images/python_logo.png",
+      "logoScale": 0.8,
       "link": "https://www.djangoproject.com/"
     },
     "csharp": {
@@ -141,6 +180,7 @@
       "icon": "csharp",
       "proficiency": 1,
       "logo": "/images/csharp_logo.png",
+      "logoScale": 0.8,
       "link": "https://docs.microsoft.com/en-us/dotnet/csharp/"
     },
     "java": {
@@ -174,6 +214,7 @@
       "icon": "react",
       "proficiency": 3,
       "logo": "/images/react_logo.png",
+      "logoScale": 0.7,
       "link": "https://reactjs.org/"
     },
     "nginx": {
@@ -185,6 +226,7 @@
       "icon": "server",
       "proficiency": 2,
       "logo": "/images/nginx_logo.jpg",
+      "logoScale": 1.1,
       "link": "https://www.nginx.com/"
     },
     "graphql": {
@@ -196,6 +238,7 @@
       "icon": "graphql",
       "proficiency": 2,
       "logo": "/images/graphql_logo.png",
+      "logoScale": 0.9,
       "link": "https://graphql.org/"
     },
     "redux": {
@@ -207,6 +250,7 @@
       "icon": "redux",
       "proficiency": 3,
       "logo": "/images/redux_logo.png",
+      "logoScale": 0.8,
       "link": "https://redux.js.org/"
     },
     "nodejs": {
@@ -218,6 +262,7 @@
       "icon": "node-js",
       "proficiency": 3,
       "logo": "/images/nodejs_logo.png",
+      "logoScale": 0.8,
       "link": "https://nodejs.org/en/"
     },
     "expressjs": {
@@ -229,6 +274,7 @@
       "icon": "node-js",
       "proficiency": 2,
       "logo": "/images/nodejs_logo.png",
+      "logoScale": 0.8,
       "link": "https://expressjs.com/"
     },
     "angularjs": {
@@ -262,6 +308,7 @@
       "icon": "postgresql",
       "proficiency": 1,
       "logo": "/images/postgresql_logo.png",
+      "logoScale": 1.8,
       "link": "https://www.postgresql.org/"
     },
     "redis": {
@@ -273,6 +320,7 @@
       "icon": "redis",
       "proficiency": 1,
       "logo": "/images/redis_logo.png",
+      "logoScale": 1.5,
       "link": "https://redis.io/"
     },
     "docker": {
@@ -285,6 +333,41 @@
       "proficiency": 2,
       "logo": "/images/docker_logo.png",
       "link": "https://www.docker.com/"
+    },
+    "webpack": {
+      "name": "Webpack",
+      "description": "",
+      "start": "11-1-2018",
+      "backgroundColor": "#8dd6f9",
+      "foregroundColor": "#ffffff",
+      "icon": "cube",
+      "proficiency": 2,
+      "logo": "/images/webpack_logo.png",
+      "link": "https://webpack.js.org/"
+    },
+    "digitalocean": {
+      "name": "Digital Ocean",
+      "description": "",
+      "start": "5-1-2018",
+      "backgroundColor": "#0069ff",
+      "foregroundColor": "#ffffff",
+      "icon": "digital-ocean",
+      "proficiency": 2,
+      "logo": "/images/digitalocean_logo.png",
+      "logoScale": 0.7,
+      "link": "https://www.digitalocean.com/"
+    },
+    "linux": {
+      "name": "Linux",
+      "description": "",
+      "start": "11-1-2012",
+      "backgroundColor": "#000000",
+      "foregroundColor": "#ffffff",
+      "icon": "linux",
+      "proficiency": 2,
+      "logo": "/images/linux_logo.png",
+      "logoScale": 0.7,
+      "link": "https://www.linuxfoundation.org/"
     }
   },
   "experienceSkills": [
@@ -303,12 +386,17 @@
     ["pinterest", "nginx"],
     ["pinterest", "redux"],
     ["pinterest", "docker"],
+    ["pinterest", "webpack"],
+    ["pinterest", "linux"],
 
     ["cegsoft", "javascript"],
     ["cegsoft", "angularjs"],
     ["cegsoft", "csharp"],
 
-    ["usf_nsf_reu", "java"]
+    ["usf_nsf_reu", "java"],
+    ["usf_nsf_reu", "linux"],
+
+    ["", ""]
   ],
   "projectSkills": [
     ["makeameal", "typescript"],
@@ -324,12 +412,30 @@
     ["simplefinanceapp", "react"],
     ["simplefinanceapp", "javascript"],
     ["simplefinanceapp", "docker"],
+    ["simplefinanceapp", "digitalocean"],
 
     ["clockio", "react"],
     ["clockio", "javascript"],
     ["clockio", "go"],
     ["clockio", "redis"],
     ["clockio", "postgresql"],
-    ["clockio", "docker"]
-  ]
+    ["clockio", "docker"],
+    ["clockio", "redux"],
+    ["clockio", "digitalocean"],
+
+    ["poseidon", "nodejs"],
+    ["poseidon", "javascript"],
+
+    ["homelab", "linux"],
+
+    ["gameoflife", "javascript"],
+
+    ["", ""]
+  ],
+  "links": {
+    "github": "https://github.com/juanjalvarez",
+    "linkedin": "https://www.linkedin.com/in/juanjalvarez97/",
+    "gitlab": "https://gitlab.com/juanjalvarez",
+    "email": "contact@juanjalvarez.me"
+  }
 }

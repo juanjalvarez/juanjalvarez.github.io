@@ -27,10 +27,11 @@ const SkillIcon = ({
   classes,
   className,
   name,
-  logo
+  logo,
+  logoScale,
 }) => (
   <div className={[classes.container, className].join(' ')}>
-    <CircularImage className={classes.logo} shadow src={logo} size={80} />
+    <CircularImage className={classes.logo} shadow src={logo} size={80} scale={logoScale} />
     <span className={classes.name}>{name}</span>
   </div>
 )
@@ -39,7 +40,8 @@ SkillIcon.propTypes = {
   classes: PropTypes.object.isRequired,
   className: PropTypes.string,
   name: PropTypes.string.isRequired,
-  logo: PropTypes.string.isRequired
+  logo: PropTypes.string.isRequired,
+  logoScale: PropTypes.number,
 }
 
 export default injectSheet(styles)(SkillIcon)

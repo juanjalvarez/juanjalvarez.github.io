@@ -7,6 +7,8 @@ import Icon from '../components/Icon'
 import ProfilePicture from './ProfilePicture'
 import NavItem from './NavItem'
 
+import data from '../data.json'
+
 const styles = {
   container: {
     backgroundColor: 'white',
@@ -73,7 +75,7 @@ const styles = {
     },
   },
   activePage: {
-    fontWeight: 'bold',
+    textDecoration: 'underline',
   },
   '@keyframes infinite-rotate': {
     from: {
@@ -134,7 +136,7 @@ class OpenNav extends PureComponent {
               className={classes.navIconLink}
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/juanjalvarez97/"
+              href={data.links.linkedin}
             >
               <Icon name="linkedin" size={50} />
             </a>
@@ -142,7 +144,7 @@ class OpenNav extends PureComponent {
               className={classes.navIconLink}
               target="_blank"
               rel="noopener noreferrer"
-              href="mailto:contact@juanjalvarez.me"
+              href={`mailto:${data.links.email}`}
             >
               <Icon name="envelope-o" size={50} />
             </a>
@@ -152,7 +154,7 @@ class OpenNav extends PureComponent {
               className={classes.navIconLink}
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/juanjalvarez"
+              href={data.links.github}
             >
               <Icon name="github" size={50} />
             </a>
@@ -160,7 +162,7 @@ class OpenNav extends PureComponent {
               className={classes.navIconLink}
               target="_blank"
               rel="noopener noreferrer"
-              href="https://gitlab.com/juanjalvarez"
+              href={data.links.gitlab}
             >
               <Icon name="gitlab" size={50} />
             </a>

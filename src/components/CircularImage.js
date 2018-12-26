@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
 const styles = {
@@ -10,21 +11,29 @@ const styles = {
     overflow: 'hidden',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   }),
-  image: {
-    width: '100%'
-  }
+  image: props => ({
+    width: '100%',
+    transform: `scale(${props.scale || 1})`,
+  })
 }
 
 const CircularImage = ({
   classes,
   className,
-  src
+  src,
 }) => (
   <div className={[classes.container, className].join(' ')}>
     <img className={classes.image} src={src} alt="" />
   </div>
 )
+
+CircularImage.propTypes = {
+  classes: PropTypes.object.isRequired,
+  className: PropTypes.string,
+  src: PropTypes.string,
+  scale: PropTypes.number,
+}
 
 export default injectSheet(styles)(CircularImage)

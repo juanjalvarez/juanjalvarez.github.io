@@ -19,7 +19,10 @@ const styles = {
   },
   icon: {
     marginRight: 10
-  }
+  },
+  body: {
+    flex: 1,
+  },
 }
 
 const IconButton = ({
@@ -31,7 +34,9 @@ const IconButton = ({
 }) => (
   <div className={[classes.container, className].join(' ')} onClick={onClick}>
     <Icon className={classes.icon} name={icon} size={30} />
-    {children}
+    <div className={classes.body}>
+      {children}
+    </div>
   </div>
 )
 

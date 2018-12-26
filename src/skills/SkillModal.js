@@ -69,7 +69,7 @@ const styles = {
   }
 }
 
-const ExperienceModal = props => {
+const SkillModal = props => {
   const {
     match,
     classes
@@ -80,7 +80,8 @@ const ExperienceModal = props => {
     name,
     start,
     logo,
-    link
+    link,
+    logoScale,
   } = skill
   const startDate = moment(start, 'M-D-YYYY')
   const monthsDiff = Math.ceil(moment().diff(startDate, 'months', true))
@@ -116,7 +117,7 @@ const ExperienceModal = props => {
       onOutsideClick={() => props.history.push('/skills')}
     >
       <div className={classes.header}>
-        <CircularImage src={logo} size={100} />
+        <CircularImage src={logo} size={100} scale={logoScale} />
         <div className={classes.info}>
           <div className={classes.company}>
             {name}
@@ -152,10 +153,10 @@ const ExperienceModal = props => {
   )
 }
 
-ExperienceModal.propTypes = {
+SkillModal.propTypes = {
   history: PropTypes.object.isRequired,
   match: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired
 }
 
-export default injectSheet(styles)(ExperienceModal)
+export default injectSheet(styles)(SkillModal)

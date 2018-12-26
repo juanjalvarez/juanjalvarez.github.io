@@ -8,6 +8,7 @@ import { bindActionCreators } from 'redux'
 import ProjectSummary from './ProjectSummary'
 import ProjectModal from './ProjectModal'
 import Spacing from '../components/Spacing'
+import IconButton from '../components/IconButton'
 
 import * as appActions from '../app/actions'
 
@@ -24,7 +25,8 @@ const styles = {
   },
   body: {
     maxWidth: 800,
-    width: '100%'
+    width: '100%',
+    margin: 20,
   },
   projectLink: {
     textDecoration: 'none',
@@ -32,10 +34,15 @@ const styles = {
   },
   summary: {
     transitionDuration: '0.2s',
+    marginBottom: 20,
     '&:hover': {
       transform: 'scale(1.05)'
     }
-  }
+  },
+  githubLink: {
+    marginBottom: 20,
+    textAlign: 'center',
+  },
 }
 
 class Projects extends PureComponent {
@@ -56,6 +63,7 @@ class Projects extends PureComponent {
         <Route path="/projects/:projectId" component={ProjectModal} />
         <div className={classes.body}>
           <Spacing with="100%" height="10%" />
+          <IconButton className={classes.githubLink} icon="github" onClick={() => window.open(data.links.github)}>View Code</IconButton>
           {
             Object.keys(projects).map(key => {
               const project = projects[key]

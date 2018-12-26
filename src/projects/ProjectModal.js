@@ -59,18 +59,22 @@ const ProjectModal = props => {
       <div className={classes.header}>
         <ProjectSummary {...project} plain showLink />
       </div>
-      <div className={classes.buttons}>
-        {
-          project.link && (
-            <IconButton icon="external-link-alt" onClick={() => window.open(project.link)}>Visit</IconButton>
-          )
-        }
-        {
-          project.gitLink && (
-            <IconButton icon="github" onClick={() => window.open(project.gitLink)}>View Code</IconButton>
-          )
-        }
-      </div>
+      {
+        (project.gitLink || project.link) && (
+          <div className={classes.buttons}>
+            {
+              project.link && (
+                <IconButton icon="external-link-alt" onClick={() => window.open(project.link)}>Visit</IconButton>
+              )
+            }
+            {
+              project.gitLink && (
+                <IconButton icon="github" onClick={() => window.open(project.gitLink)}>View Code</IconButton>
+              )
+            }
+          </div>
+        )
+      }
       {
         project.description.length > 0 && (
           <div className={classes.description}>
