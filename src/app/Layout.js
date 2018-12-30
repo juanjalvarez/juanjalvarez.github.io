@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Blur from '../components/Blur'
@@ -10,6 +10,7 @@ import Nav from '../sidebar/Nav'
 const Projects = lazy(() => import('../projects/Projects'))
 const Experiences = lazy(() => import('../experience/Experiences'))
 const Skills = lazy(() => import('../skills/Skills'))
+const About = lazy(() => import('../about/About'))
 
 const styles = theme => ({
   container: {
@@ -43,9 +44,11 @@ const Layout = ({
     <Blur className={classes.children}>
       <Suspense fallback={null}>
         <Switch>
+          <Route exact path="/" render={() => <Redirect to="/about" />} />
           <Route path="/projects" component={Projects} />
           <Route path="/experience" component={Experiences} />
           <Route path="/skills" component={Skills} />
+          <Route path="/about" component={About} />
         </Switch>
       </Suspense>
     </Blur>

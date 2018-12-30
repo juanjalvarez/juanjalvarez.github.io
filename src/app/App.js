@@ -7,35 +7,21 @@ import { createBrowserHistory } from 'history'
 import moment from 'moment'
 
 import Layout from './Layout'
-
+import analytics from '../utils/analytics'
 import rootReducer from '../reducer'
 import theme from '../theme'
-import analytics from '../utils/analytics'
 import * as actions from './actions'
 import './app.css'
 
-const analyticsEnabled = Boolean(process.env['REACT_APP_ANALYTICS_ENABLED'])
-
-const pageview = path => {
-  if (analyticsEnabled) {
-    analytics.pageview(path).send()
-  }
-}
-
 const history = createBrowserHistory()
-
-history.listen(location => {
-  pageview(location.pathname)
-})
+history.listen(analytics)
 
 const enhancers = []
 const reduxDevTools = window['__REDUX_DEVTOOLS_EXTENSION__']
 if (reduxDevTools) {
   enhancers.push(reduxDevTools())
 }
-
 const combinedReducers = combineReducers(rootReducer)
-
 const store = createStore(combinedReducers, {}, compose(...enhancers))
 
 setTimeout(() => {
@@ -48,7 +34,7 @@ class App extends PureComponent {
   constructor() {
     super()
     window.addEventListener('resize', this.handleWindowResize)
-    pageview(window.location.pathname)
+    analytics(window.location)
   }
 
   componentWillUnmount = () => window.removeEventListener('resize', this.handleWindowResize)

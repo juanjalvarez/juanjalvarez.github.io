@@ -7,4 +7,17 @@ if (!visitorId) {
   localStorage.setItem('visitorId', visitorId)
 }
 
-export default new Visitor(process.env['REACT_APP_GOOGLE_ANALYTICS_APP_ID'], visitorId)
+const analytics = new Visitor(process.env['REACT_APP_GOOGLE_ANALYTICS_APP_ID'], visitorId)
+
+const analyticsEnabled = process.env['REACT_APP_PRODUCTION_ORIGIN'] === window.location.origin
+console.log(`Pageview analytics are ${analyticsEnabled ? 'enabled' : 'disabled'}`)
+
+const pageview = path => {
+  if (analyticsEnabled) {
+    analytics.pageview(path).send()
+  } else {
+    console.log(`Ignoring pageview analytics for: ${path}`)
+  }
+}
+
+export default location => pageview(location.pathname)
