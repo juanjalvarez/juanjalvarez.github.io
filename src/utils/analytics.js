@@ -9,7 +9,7 @@ if (!visitorId) {
 
 const analytics = new Visitor(process.env['REACT_APP_GOOGLE_ANALYTICS_APP_ID'], visitorId)
 
-const analyticsEnabled = window.location.origin.indexOf(process.env['REACT_APP_PRODUCTION_ORIGIN']) !== -1
+const analyticsEnabled = process.env['REACT_APP_PRODUCTION_ORIGIN'].indexOf(window.location.origin) !== -1
 console.log(`Pageview analytics are ${analyticsEnabled ? 'enabled' : 'disabled'}`)
 
 const pageview = path => {
