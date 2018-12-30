@@ -26,7 +26,7 @@ const styles = {
     top: position.desktop.top,
     right: position.desktop.right,
     animation: props => (props.shouldRenderAnimation && props.shouldRenderInitialAnimation) ? 'slide 3s forwards' : '',
-    '@media (max-width: 500px)': {
+    '@media (max-width: 800px)': {
       top: position.mobile.top,
       right: position.mobile.right
     },
@@ -58,8 +58,8 @@ const styles = {
       right: (window.innerWidth / 2) - 60
     },
     '100%': {
-      top: window.innerWidth < 501 ? position.mobile.top : position.desktop.top,
-      right: window.innerWidth < 501 ? position.mobile.right : position.desktop.right,
+      top: window.innerWidth < 801 ? position.mobile.top : position.desktop.top,
+      right: window.innerWidth < 801 ? position.mobile.right : position.desktop.right,
     }
   },
   '@keyframes name-slide': {

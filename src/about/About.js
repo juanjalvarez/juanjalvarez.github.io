@@ -15,7 +15,7 @@ const styles = {
   body: {
     maxWidth: 600,
     width: '100%',
-    margin: 20,
+    padding: 20,
   },
   paragraph: {
     textAlign: 'justify',
@@ -29,14 +29,24 @@ const styles = {
   },
   buttons: {
     display: 'flex',
+    '@media (max-width: 500px)': {
+      flexDirection: 'column',
+    },
   },
   button: {
     flex: 1,
     fontSize: 16,
     textAlign: 'center',
     marginRight: 20,
+    '@media (max-width: 500px)': {
+      marginRight: 0,
+      marginBottom: 20,
+    },
     '*:last-child': {
       marginRight: 0,
+      '@media (max-width: 500px)': {
+        marginBottom: 0,
+      },
     },
   },
 }
