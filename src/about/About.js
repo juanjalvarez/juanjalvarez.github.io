@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
+import IconButton from '../components/IconButton'
 import Spacing from '../components/Spacing'
 
 const styles = {
@@ -26,13 +27,39 @@ const styles = {
     width: '100%',
     textAlign: 'center',
   },
+  buttons: {
+    display: 'flex',
+  },
+  button: {
+    flex: 1,
+    fontSize: 16,
+    textAlign: 'center',
+    marginRight: 20,
+    '*:last-child': {
+      marginRight: 0,
+    },
+  },
 }
 
 class About extends Component {
 
   static propTypes = {
     classes: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired,
   }
+
+  handleLinkClick = link => {
+    const {
+      history,
+    } = this.props
+    history.push(link)
+  }
+
+  handleExperienceClick = () => this.handleLinkClick('/experience')
+
+  handleSkillsClick = () => this.handleLinkClick('/skills')
+
+  handleProjectsClick = () => this.handleLinkClick('/projects')
 
   render() {
     const {
@@ -55,6 +82,12 @@ class About extends Component {
           <br />
           <h3 className={classes.title}>Where do I see myself in five years?</h3>
           <p className={classes.paragraph}>I take pride in my ambition and desire to be entrepreneurial. In five years from now I expect to have encountered the right opportunities to test and improve my leadership, problem solving and technical skills. I am a non-conforming person so I can only hope for, and work-towards, a future where my ambitions are brought to fruition.</p>
+          <Spacing height={50} />
+          <div className={classes.buttons}>
+            <IconButton onClick={this.handleExperienceClick} className={classes.button} background="#d32f2f" icon="chair-office">Experience</IconButton>
+            <IconButton onClick={this.handleSkillsClick} className={classes.button} background="#00e676" icon="book-spells">Skills</IconButton>
+            <IconButton onClick={this.handleProjectsClick} className={classes.button} background="#1976d2" icon="laptop-code">Projects</IconButton>
+          </div>
           <Spacing height={150} />
         </div>
       </div>

@@ -11,7 +11,7 @@ const styles = {
     fill: props => props.foreground || 'white',
     borderRadius: 5,
     fontSize: 20,
-    boxShadow: '0px 4px 30px rgba(0, 0, 0,25%)',
+    boxShadow: '0px 4px 10px lightgrey',
     display: 'flex',
     alignItems: 'center',
     padding: 10,

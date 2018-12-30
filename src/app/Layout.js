@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import { Switch, Route, Redirect } from 'react-router-dom'
@@ -6,11 +6,10 @@ import { connect } from 'react-redux'
 
 import Blur from '../components/Blur'
 import Nav from '../sidebar/Nav'
-
-const Projects = lazy(() => import('../projects/Projects'))
-const Experiences = lazy(() => import('../experience/Experiences'))
-const Skills = lazy(() => import('../skills/Skills'))
-const About = lazy(() => import('../about/About'))
+import Projects from '../projects/Projects'
+import Experiences from '../experience/Experiences'
+import Skills from '../skills/Skills'
+import About from '../about/About'
 
 const styles = theme => ({
   container: {
@@ -42,15 +41,13 @@ const Layout = ({
   <div className={classes.container}>
     <Nav />
     <Blur className={classes.children}>
-      <Suspense fallback={null}>
-        <Switch>
-          <Route exact path="/" render={() => <Redirect to="/about" />} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/experience" component={Experiences} />
-          <Route path="/skills" component={Skills} />
-          <Route path="/about" component={About} />
-        </Switch>
-      </Suspense>
+      <Switch>
+        <Route exact path="/" render={() => <Redirect to="/about" />} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/experience" component={Experiences} />
+        <Route path="/skills" component={Skills} />
+        <Route path="/about" component={About} />
+      </Switch>
     </Blur>
   </div>
 )

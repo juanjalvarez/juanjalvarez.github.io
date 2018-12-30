@@ -8,7 +8,7 @@
       "end": "now",
       "backgroundColor": "#bd081c",
       "foregroundColor": "#ffffff",
-      "logo": "/images/pinterest_logo.png",
+      "logo": "/images/logos/pinterest_logo.png",
       "icon": "pinterest",
       "link": "https://about.pinterest.com/en"
     },
@@ -20,7 +20,7 @@
       "end": "9-10-2018",
       "backgroundColor": "#ff4d12",
       "foregroundColor": "#ffffff",
-      "logo": "/images/carelinx_logo.png",
+      "logo": "/images/logos/carelinx_logo.png",
       "icon": "hands-heart",
       "link": "https://www.carelinx.com/about"
     },
@@ -32,7 +32,7 @@
       "end": "4-2-2017",
       "backgroundColor": "#ff4d12",
       "foregroundColor": "#ffffff",
-      "logo": "/images/ieee_logo.png",
+      "logo": "/images/logos/ieee_logo.png",
       "icon": "atom",
       "link": "http://sites.ieee.org/southeastcon2017/"
     },
@@ -44,7 +44,7 @@
       "end": "3-1-2017",
       "backgroundColor": "#076795",
       "foregroundColor": "#ffffff",
-      "logo": "/images/cegsoft_logo.png",
+      "logo": "/images/logos/cegsoft_logo.png",
       "icon": "file-invoice-dollar",
       "link": "https://home.cegsoft.com/#about"
     },
@@ -56,7 +56,7 @@
       "end": "7-29-2016",
       "backgroundColor": "#007953",
       "foregroundColor": "#ffffff",
-      "logo": "/images/nsf_logo.png",
+      "logo": "/images/logos/nsf_logo.png",
       "icon": "microscope",
       "link": "http://reu.cse.usf.edu/index.html"
     },
@@ -68,7 +68,7 @@
       "end": "10-13-2016",
       "backgroundColor": "#0061cc",
       "foregroundColor": "#ffffff",
-      "logo": "/images/icpc_logo.png",
+      "logo": "/images/logos/icpc_logo.png",
       "logoScale": 0.7,
       "icon": "trophy-alt",
       "link": "https://icpc.baylor.edu/"
@@ -80,7 +80,7 @@
       "start": "12-26-2018",
       "backgroundColor": "#000000",
       "foregroundColor": "#FFFFFF",
-      "logo": "/images/distraction_agency_logo.png",
+      "logo": "/images/logos/distraction_agency_logo.png",
       "logoScale": 1,
       "icon": "sun"
     },
@@ -89,7 +89,7 @@
       "start": "5-1-2018",
       "backgroundColor": "#0090FF",
       "foregroundColor": "#FFFFFF",
-      "logo": "/images/clockio_logo.png",
+      "logo": "/images/logos/clockio_logo.png",
       "logoScale": 1.5,
       "icon": "clock",
       "link": "https://clockio.online",
@@ -100,7 +100,7 @@
       "start": "9-1-2018",
       "backgroundColor": "#66bb6a",
       "foregroundColor": "#FFFFFF",
-      "logo": "/images/no_logo.png",
+      "logo": "/images/logos/no_logo.png",
       "logoScale": 0.5,
       "icon": "dollar-sign",
       "link": "https://simplefinance.app",
@@ -111,7 +111,7 @@
       "start": "6-1-2018",
       "backgroundColor": "#000000",
       "foregroundColor": "#FFFFFF",
-      "logo": "/images/no_logo.png",
+      "logo": "/images/logos/no_logo.png",
       "logoScale": 0.5,
       "icon": "tree-alt",
       "link": "https://conway.juanjalvarez.me/",
@@ -122,7 +122,7 @@
       "start": "10-1-2017",
       "backgroundColor": "#282828",
       "foregroundColor": "#6DC25B",
-      "logo": "/images/make-a-meal_logo.png",
+      "logo": "/images/logos/make-a-meal_logo.png",
       "logoScale": 0.7,
       "icon": "makeameal",
       "gitLink": "https://github.com/Make-A-Meal"
@@ -132,7 +132,7 @@
       "start": "12-1-2016",
       "backgroundColor": "#000000",
       "foregroundColor": "#ffffff",
-      "logo": "/images/no_logo.png",
+      "logo": "/images/logos/no_logo.png",
       "logoScale": 0.5,
       "icon": "server"
     },
@@ -141,7 +141,7 @@
       "start": "12-21-2016",
       "backgroundColor": "#000000",
       "foregroundColor": "#FFFFFF",
-      "logo": "/images/poseidon_logo.jpg",
+      "logo": "/images/logos/poseidon_logo.jpg",
       "logoScale": 0.5,
       "icon": "tint",
       "gitLink": "https://github.com/juanjalvarez/PoseidonBot"
@@ -155,7 +155,7 @@
       "foregroundColor": "#000000",
       "icon": "js",
       "proficiency": 3,
-      "logo": "/images/js_logo.png",
+      "logo": "/images/logos/js_logo.png",
       "link": "https://www.javascript.com/"
     },
     "python": {
@@ -165,7 +165,7 @@
       "foregroundColor": "#ffffff",
       "icon": "python",
       "proficiency": 2,
-      "logo": "/images/python_logo.png",
+      "logo": "/images/logos/python_logo.png",
       "logoScale": 0.8,
       "link": "https://www.python.org/"
     },
@@ -176,8 +176,8 @@
       "foregroundColor": "#ffffff",
       "icon": "python",
       "proficiency": 2,
-      "logo": "/images/flask_logo.png",
-      "logoScale": 0.6,
+      "logo": "/images/logos/flask_logo.png",
+      "logoScale": 0.5,
       "link": "http://flask.pocoo.org/"
     },
     "django": {
@@ -187,7 +187,7 @@
       "foregroundColor": "#ffffff",
       "icon": "python",
       "proficiency": 2,
-      "logo": "/images/python_logo.png",
+      "logo": "/images/logos/python_logo.png",
       "logoScale": 0.8,
       "link": "https://www.djangoproject.com/"
     },
@@ -198,7 +198,7 @@
       "foregroundColor": "#ffffff",
       "icon": "csharp",
       "proficiency": 1,
-      "logo": "/images/csharp_logo.png",
+      "logo": "/images/logos/csharp_logo.png",
       "logoScale": 0.8,
       "link": "https://docs.microsoft.com/en-us/dotnet/csharp/"
     },
@@ -209,7 +209,7 @@
       "foregroundColor": "#ffffff",
       "icon": "java",
       "proficiency": 1,
-      "logo": "/images/java_logo.png",
+      "logo": "/images/logos/java_logo.png",
       "link": "https://www.oracle.com/java/"
     },
     "typescript": {
@@ -219,7 +219,7 @@
       "foregroundColor": "#ffffff",
       "icon": "ts",
       "proficiency": 3,
-      "logo": "/images/typescript_logo.png",
+      "logo": "/images/logos/typescript_logo.png",
       "link": "https://www.typescriptlang.org/"
     },
     "react": {
@@ -229,7 +229,7 @@
       "foregroundColor": "#61dafb",
       "icon": "react",
       "proficiency": 3,
-      "logo": "/images/react_logo.png",
+      "logo": "/images/logos/react_logo.png",
       "logoScale": 0.7,
       "link": "https://reactjs.org/"
     },
@@ -240,7 +240,7 @@
       "foregroundColor": "#009639",
       "icon": "server",
       "proficiency": 2,
-      "logo": "/images/nginx_logo.jpg",
+      "logo": "/images/logos/nginx_logo.jpg",
       "logoScale": 1.1,
       "link": "https://www.nginx.com/"
     },
@@ -251,7 +251,7 @@
       "foregroundColor": "#E10098",
       "icon": "graphql",
       "proficiency": 2,
-      "logo": "/images/graphql_logo.png",
+      "logo": "/images/logos/graphql_logo.png",
       "logoScale": 0.9,
       "link": "https://graphql.org/"
     },
@@ -262,7 +262,7 @@
       "foregroundColor": "#ffffff",
       "icon": "redux",
       "proficiency": 3,
-      "logo": "/images/redux_logo.png",
+      "logo": "/images/logos/redux_logo.png",
       "logoScale": 0.8,
       "link": "https://redux.js.org/"
     },
@@ -273,7 +273,7 @@
       "foregroundColor": "#169e1f",
       "icon": "node-js",
       "proficiency": 3,
-      "logo": "/images/nodejs_logo.png",
+      "logo": "/images/logos/nodejs_logo.png",
       "logoScale": 0.8,
       "link": "https://nodejs.org/en/"
     },
@@ -284,7 +284,7 @@
       "foregroundColor": "#000000",
       "icon": "node-js",
       "proficiency": 3,
-      "logo": "/images/nodejs_logo.png",
+      "logo": "/images/logos/nodejs_logo.png",
       "logoScale": 0.8,
       "link": "https://expressjs.com/"
     },
@@ -295,7 +295,7 @@
       "foregroundColor": "#ffffff",
       "icon": "angular",
       "proficiency": 1,
-      "logo": "/images/angular_logo.png",
+      "logo": "/images/logos/angular_logo.png",
       "link": "https://expressjs.com/"
     },
     "go": {
@@ -305,7 +305,7 @@
       "foregroundColor": "#000000",
       "icon": "go",
       "proficiency": 2,
-      "logo": "/images/go_logo.png",
+      "logo": "/images/logos/go_logo.png",
       "link": "https://golang.org/"
     },
     "postgresql": {
@@ -315,7 +315,7 @@
       "foregroundColor": "#ffffff",
       "icon": "postgresql",
       "proficiency": 2,
-      "logo": "/images/postgresql_logo.png",
+      "logo": "/images/logos/postgresql_logo.png",
       "logoScale": 1.8,
       "link": "https://www.postgresql.org/"
     },
@@ -326,7 +326,7 @@
       "foregroundColor": "#ff4444",
       "icon": "redis",
       "proficiency": 2,
-      "logo": "/images/redis_logo.png",
+      "logo": "/images/logos/redis_logo.png",
       "logoScale": 1.5,
       "link": "https://redis.io/"
     },
@@ -337,7 +337,7 @@
       "foregroundColor": "#ffffff",
       "icon": "docker",
       "proficiency": 2,
-      "logo": "/images/docker_logo.png",
+      "logo": "/images/logos/docker_logo.png",
       "link": "https://www.docker.com/"
     },
     "webpack": {
@@ -347,7 +347,7 @@
       "foregroundColor": "#ffffff",
       "icon": "cube",
       "proficiency": 2,
-      "logo": "/images/webpack_logo.png",
+      "logo": "/images/logos/webpack_logo.png",
       "link": "https://webpack.js.org/"
     },
     "digitalocean": {
@@ -357,7 +357,7 @@
       "foregroundColor": "#ffffff",
       "icon": "digital-ocean",
       "proficiency": 2,
-      "logo": "/images/digitalocean_logo.png",
+      "logo": "/images/logos/digitalocean_logo.png",
       "logoScale": 0.7,
       "link": "https://www.digitalocean.com/"
     },
@@ -368,7 +368,7 @@
       "foregroundColor": "#ffffff",
       "icon": "linux",
       "proficiency": 2,
-      "logo": "/images/linux_logo.png",
+      "logo": "/images/logos/linux_logo.png",
       "logoScale": 0.7,
       "link": "https://www.linuxfoundation.org/"
     },
@@ -379,7 +379,7 @@
       "foregroundColor": "#ffffff",
       "icon": "triangle",
       "proficiency": 2,
-      "logo": "/images/prisma_logo.png",
+      "logo": "/images/logos/prisma_logo.png",
       "logoScale": 1,
       "link": "https://www.prisma.io/"
     },
@@ -390,7 +390,7 @@
       "foregroundColor": "#ffffff",
       "icon": "code",
       "proficiency": 1,
-      "logo": "/images/cpp_logo.png",
+      "logo": "/images/logos/cpp_logo.png",
       "logoScale": 0.7,
       "link": "http://www.cplusplus.com/"
     },
@@ -401,7 +401,7 @@
       "foregroundColor": "#ffffff",
       "icon": "blind",
       "proficiency": 1,
-      "logo": "/images/c_logo.png",
+      "logo": "/images/logos/c_logo.png",
       "logoScale": 0.9,
       "link": "https://en.wikipedia.org/wiki/C_(programming_language)"
     },
@@ -412,7 +412,7 @@
       "foregroundColor": "#ffffff",
       "icon": "git-square",
       "proficiency": 3,
-      "logo": "/images/git_logo.png",
+      "logo": "/images/logos/git_logo.png",
       "logoScale": 0.9,
       "link": "https://git-scm.com/"
     },
@@ -423,7 +423,7 @@
       "foregroundColor": "#ffffff",
       "icon": "file-alt",
       "proficiency": 1,
-      "logo": "/images/latex_logo.png",
+      "logo": "/images/logos/latex_logo.png",
       "logoScale": 0.8,
       "link": "https://www.latex-project.org/"
     }

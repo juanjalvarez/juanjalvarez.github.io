@@ -25,7 +25,7 @@ const styles = {
     width: '100%',
     height: 'auto',
     backgroundColor: 'white',
-    boxShadow: '0px 4px 30px rgba(0, 0, 0,25%)',
+    boxShadow: '0px 4px 30px lightgrey',
     margin: 20,
     padding: 30,
     borderRadius: 10,

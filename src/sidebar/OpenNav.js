@@ -21,7 +21,7 @@ const styles = {
     padding: 30,
     paddingLeft: 50,
     paddingRight: 50,
-    boxShadow: '0px 4px 30px rgba(0, 0, 0,25%)',
+    boxShadow: '0px 4px 30px lightgrey',
     borderRadius: 20,
     zIndex: 10,
     maxHeight: '100%',

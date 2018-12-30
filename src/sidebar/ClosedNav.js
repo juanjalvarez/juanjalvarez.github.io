@@ -40,7 +40,7 @@ const styles = {
     animation: props => (props.shouldRenderAnimation && props.shouldRenderInitialAnimation) ? 'name-slide 3s forwards' : ''
   },
   picture: {
-    boxShadow: '0px 3px 10px rgba(0, 0, 0, 50%)',
+    boxShadow: '0px 3px 30px lightgrey',
     transitionDuration: '0.1s',
     cursor: 'pointer',
     '&:hover': {
