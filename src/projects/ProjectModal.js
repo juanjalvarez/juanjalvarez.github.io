@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import Markdown from 'react-markdown'
@@ -13,11 +13,13 @@ import data from '../data.json'
 const styles = {
   header: {
     display: 'flex',
-    marginBottom: 30
+    marginBottom: 30,
+    justifyContent: 'center',
   },
   tagContainer: {
     display: 'flex',
     flexWrap: 'wrap',
+    justifyContent: 'center',
     '& > *:not(:last-child)': {
       marginRight: 5
     },
@@ -31,12 +33,17 @@ const styles = {
   buttons: {
     display: 'flex',
     marginBottom: 30,
+    justifyContent: 'center',
     '& > *': {
       marginRight: 5,
       '&:last-child': {
         marginRight: 0
       }
     }
+  },
+  relevantSkills: {
+    width: '100%',
+    textAlign: 'center',
   }
 }
 
@@ -119,19 +126,25 @@ class ProjectModal extends Component {
             <Markdown source={markdownSource} />
           )
         }
-        <br />
-        <h3>Relevant Skills</h3>
-        <div className={classes.tagContainer}>
-          {
-            skills.map(skill => (
-              <Tag
-                key={skill.id}
-                {...skill}
-                link={`/skills/${skill.id}`}
-              />
-            ))
-          }
-        </div>
+        {
+          skills.length > 0 && (
+            <Fragment>
+              <br />
+              <h3 className={classes.relevantSkills}>Relevant Skills</h3>
+              <div className={classes.tagContainer}>
+                {
+                  skills.map(skill => (
+                    <Tag
+                      key={skill.id}
+                      {...skill}
+                      link={`/skills/${skill.id}`}
+                    />
+                  ))
+                }
+              </div>
+            </Fragment>
+          )
+        }
       </Modal>
     )
   }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
@@ -11,21 +11,27 @@ import data from '../data.json'
 const styles = {
   header: {
     display: 'flex',
-    marginBottom: 30
+    marginBottom: 30,
+    justifyContent: 'center',
   },
   tagContainer: {
     display: 'flex',
     flexWrap: 'wrap',
+    justifyContent: 'center',
     '& > *:not(:last-child)': {
-      marginRight: 5
+      marginRight: 5,
     },
     '& > *': {
-      marginBottom: 5
+      marginBottom: 5,
     }
   },
   description: {
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
+  relevantSkills: {
+    width: '100%',
+    textAlign: 'center',
+  },
 }
 
 class ExperienceModal extends Component {
@@ -82,19 +88,25 @@ class ExperienceModal extends Component {
         <div className={classes.header}>
           <ExperienceSummary {...experience} plain showLink />
         </div>
-        <br />
-        <h3>Relevant Skills</h3>
-        <div className={classes.tagContainer}>
-          {
-            skills.map(skill => (
-              <Tag
-                key={skill.id}
-                {...skill}
-                link={`/skills/${skill.id}`}
-              />
-            ))
-          }
-        </div>
+        {
+          skills.length > 0 && (
+            <Fragment>
+              <br />
+              <h3 className={classes.relevantSkills}>Relevant Skills</h3>
+              <div className={classes.tagContainer}>
+                {
+                  skills.map(skill => (
+                    <Tag
+                      key={skill.id}
+                      {...skill}
+                      link={`/skills/${skill.id}`}
+                    />
+                  ))
+                }
+              </div>
+            </Fragment>
+          )
+        }
       </Modal>
     )
   }

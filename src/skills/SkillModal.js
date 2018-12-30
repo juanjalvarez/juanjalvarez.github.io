@@ -15,25 +15,27 @@ const styles = {
     display: 'flex',
     marginBottom: 30,
     alignItems: 'center',
+    justifyContent: 'center',
     '@media (max-width: 500px)': {
       flexDirection: 'column',
       '& > *:first-child': {
-        marginBottom: 20
-      }
-    }
+        marginBottom: 20,
+      },
+    },
   },
   tagContainer: {
     display: 'flex',
     flexWrap: 'wrap',
+    justifyContent: 'center',
     '& > *:not(:last-child)': {
-      marginRight: 5
+      marginRight: 5,
     },
     '& > *': {
-      marginBottom: 5
-    }
+      marginBottom: 5,
+    },
   },
   description: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   info: {
     marginLeft: 20,
@@ -42,12 +44,12 @@ const styles = {
       flexDirection: 'column',
       alignItems: 'center',
       textAlign: 'center',
-      marginLeft: 0
-    }
+      marginLeft: 0,
+    },
   },
   company: {
     fontSize: 24,
-    display: 'flex'
+    display: 'flex',
   },
   externalLink: {
     marginLeft: 10,
@@ -55,7 +57,7 @@ const styles = {
     cursor: 'pointer',
   },
   position: {
-    color: '#404040'
+    color: '#404040',
   },
   extrainfo: {
     display: 'flex',
@@ -64,9 +66,13 @@ const styles = {
     marginTop: 4,
     marginBottom: 4,
     '& > *:first-child': {
-      marginRight: 5
-    }
-  }
+      marginRight: 5,
+    },
+  },
+  relevantSkills: {
+    width: '100%',
+    textAlign: 'center',
+  },
 }
 
 const SkillModal = props => {
@@ -137,7 +143,7 @@ const SkillModal = props => {
         </div>
       </div>
       <br />
-      <h3>Relevant Projects & Experiences</h3>
+      <h3 className={classes.relevantSkills}>Relevant Projects & Experiences</h3>
       <div className={classes.tagContainer}>
         {relatedExperiences}
         {relatedProjects}

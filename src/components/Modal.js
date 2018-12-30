@@ -21,7 +21,7 @@ const styles = {
   },
   body: {
     maxWidth: 700,
-    maxHeight: 500,
+    maxHeight: () => Math.min(window.innerHeight - 200, 1000),
     width: '100%',
     height: 'auto',
     backgroundColor: 'white',

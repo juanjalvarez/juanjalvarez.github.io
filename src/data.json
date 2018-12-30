@@ -21,8 +21,20 @@
       "backgroundColor": "#ff4d12",
       "foregroundColor": "#ffffff",
       "logo": "/images/carelinx_logo.png",
-      "icon": "carelinx",
+      "icon": "hands-heart",
       "link": "https://www.carelinx.com/about"
+    },
+    "southeastcon2017": {
+      "name": "IEEE SouthEastCon2017",
+      "location": "Charlotte, NC",
+      "position": "Primary Author",
+      "start": "3-20-2017",
+      "end": "4-2-2017",
+      "backgroundColor": "#ff4d12",
+      "foregroundColor": "#ffffff",
+      "logo": "/images/ieee_logo.png",
+      "icon": "atom",
+      "link": "http://sites.ieee.org/southeastcon2017/"
     },
     "cegsoft": {
       "name": "CEGsoft",
@@ -397,12 +409,23 @@
       "name": "Git",
       "start": "8-21-2015",
       "backgroundColor": "#f14e32",
-      "foregroundColor": "#000000",
+      "foregroundColor": "#ffffff",
       "icon": "git-square",
       "proficiency": 3,
       "logo": "/images/git_logo.png",
       "logoScale": 0.9,
       "link": "https://git-scm.com/"
+    },
+    "latex": {
+      "name": "LaTeX",
+      "start": "5-25-2016",
+      "backgroundColor": "#000000",
+      "foregroundColor": "#ffffff",
+      "icon": "file-alt",
+      "proficiency": 1,
+      "logo": "/images/latex_logo.png",
+      "logoScale": 0.8,
+      "link": "https://www.latex-project.org/"
     }
   },
   "experienceSkills": [
@@ -410,11 +433,11 @@
     ["pinterest", "react"],
     ["pinterest", "python"],
     ["pinterest", "flask"],
-    ["pinterest", "nginx"],
     ["pinterest", "redux"],
     ["pinterest", "docker"],
     ["pinterest", "webpack"],
     ["pinterest", "linux"],
+    ["pinterest", "git"],
 
     ["carelinx", "javascript"],
     ["carelinx", "react"],
@@ -424,6 +447,9 @@
     ["carelinx", "redux"],
     ["carelinx", "postgresql"],
     ["carelinx", "webpack"],
+    ["carelinx", "git"],
+
+    ["southeastcon2017", "latex"],
 
     ["cegsoft", "javascript"],
     ["cegsoft", "angularjs"],
@@ -431,6 +457,7 @@
 
     ["usf_nsf_reu", "java"],
     ["usf_nsf_reu", "linux"],
+    ["usf_nsf_reu", "latex"],
 
     ["acm_icpc", "java"],
     ["acm_icpc", "cpp"],
@@ -449,6 +476,7 @@
     ["distractionagency", "docker"],
     ["distractionagency", "graphql"],
     ["distractionagency", "redux"],
+    ["distractionagency", "git"],
 
     ["makeameal", "typescript"],
     ["makeameal", "javascript"],
@@ -459,11 +487,13 @@
     ["makeameal", "nginx"],
     ["makeameal", "redux"],
     ["makeameal", "docker"],
+    ["makeameal", "git"],
 
     ["simplefinanceapp", "react"],
     ["simplefinanceapp", "javascript"],
     ["simplefinanceapp", "docker"],
     ["simplefinanceapp", "digitalocean"],
+    ["simplefinanceapp", "git"],
 
     ["clockio", "react"],
     ["clockio", "javascript"],
@@ -473,6 +503,7 @@
     ["clockio", "docker"],
     ["clockio", "redux"],
     ["clockio", "digitalocean"],
+    ["clockio", "git"],
 
     ["poseidon", "nodejs"],
     ["poseidon", "javascript"],
