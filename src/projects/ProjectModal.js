@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
+import Markdown from 'react-markdown'
 
 import ProjectSummary from './ProjectSummary'
 import Modal from '../components/Modal'
@@ -39,70 +40,101 @@ const styles = {
   }
 }
 
-const ProjectModal = props => {
-  const {
-    match,
-    classes
-  } = props
-  const projectId = match.params.projectId
-  const project = data['projects'][projectId]
-  const skills = data['projectSkills']
-    .filter(projectSkill => projectSkill[0] === projectId)
-    .map(projectSkill => ({
-      id: projectSkill[1],
-      ...data['skills'][projectSkill[1]]
-    }))
-  return (
-    <Modal
-      onOutsideClick={() => props.history.push('/projects')}
-    >
-      <div className={classes.header}>
-        <ProjectSummary {...project} plain showLink />
-      </div>
-      {
-        (project.gitLink || project.link) && (
-          <div className={classes.buttons}>
-            {
-              project.link && (
-                <IconButton icon="external-link-alt" onClick={() => window.open(project.link)}>Visit</IconButton>
-              )
-            }
-            {
-              project.gitLink && (
-                <IconButton icon="github" onClick={() => window.open(project.gitLink)}>View Code</IconButton>
-              )
-            }
-          </div>
-        )
-      }
-      {
-        project.description.length > 0 && (
-          <div className={classes.description}>
-            {project.description}
-          </div>
-        )
-      }
-      <br />
-      <h3>Relevant Skills</h3>
-      <div className={classes.tagContainer}>
-        {
-          skills.map(skill => (
-            <Tag
-              key={skill.id}
-              {...skill}
-              link={`/skills/${skill.id}`}
-            />
-          ))
-        }
-      </div>
-    </Modal>
-  )
-}
+class ProjectModal extends Component {
 
-ProjectModal.propTypes = {
-  history: PropTypes.object.isRequired,
-  match: PropTypes.object.isRequired,
-  classes: PropTypes.object.isRequired
+  static propTypes = {
+    history: PropTypes.object.isRequired,
+    match: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired
+  }
+
+  state = {
+    markdownSource: '',
+    isFetchingMarkdown: false,
+  }
+
+  async componentDidMount() {
+    const {
+      match,
+    } = this.props
+    const projectId = match.params.projectId
+    this.setState({
+      isFetchingMarkdown: true,
+    })
+    const response = await fetch(`/markdown/${projectId}.md`)
+    const source = await response.text()
+    let processedSource = ''
+    if (!source.startsWith('<!DOCTYPE')) {
+      processedSource = source
+    }
+    this.setState({
+      markdownSource: processedSource,
+      isFetchingMarkdown: false,
+    })
+  }
+
+  render() {
+    const {
+      match,
+      classes,
+      history,
+    } = this.props
+    const {
+      isFetchingMarkdown,
+      markdownSource,
+    } = this.state
+    const projectId = match.params.projectId
+    const project = data['projects'][projectId]
+    const skills = data['projectSkills']
+      .filter(projectSkill => projectSkill[0] === projectId)
+      .map(projectSkill => ({
+        id: projectSkill[1],
+        ...data['skills'][projectSkill[1]]
+      }))
+    return (
+      <Modal
+        onOutsideClick={() => history.push('/projects')}
+      >
+        <div className={classes.header}>
+          <ProjectSummary {...project} plain showLink />
+        </div>
+        {
+          (project.gitLink || project.link) && (
+            <div className={classes.buttons}>
+              {
+                project.link && (
+                  <IconButton icon="external-link-alt" onClick={() => window.open(project.link)}>Visit</IconButton>
+                )
+              }
+              {
+                project.gitLink && (
+                  <IconButton icon="github" onClick={() => window.open(project.gitLink)}>View Code</IconButton>
+                )
+              }
+            </div>
+          )
+        }
+        {
+          (!isFetchingMarkdown && markdownSource && markdownSource.length > 0) && (
+            <Markdown source={markdownSource} />
+          )
+        }
+        <br />
+        <h3>Relevant Skills</h3>
+        <div className={classes.tagContainer}>
+          {
+            skills.map(skill => (
+              <Tag
+                key={skill.id}
+                {...skill}
+                link={`/skills/${skill.id}`}
+              />
+            ))
+          }
+        </div>
+      </Modal>
+    )
+  }
 }
 
 export default injectSheet(styles)(ProjectModal)

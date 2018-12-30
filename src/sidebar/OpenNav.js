@@ -151,7 +151,7 @@ class OpenNav extends PureComponent {
               rel="noopener noreferrer"
               href={`mailto:${data.links.email}`}
             >
-              <Icon name="envelope-o" size={50} />
+              <Icon name="envelope" size={50} />
             </a>
           </div>
           <div className={classes.navIconRow}>

@@ -2,7 +2,6 @@
   "experiences": {
     "pinterest": {
       "name": "Pinterest",
-      "description": "",
       "location": "San Francisco, CA",
       "position": "Software Engineer - Analytics Platform",
       "start": "9-24-2018",
@@ -15,7 +14,6 @@
     },
     "carelinx": {
       "name": "CareLinx",
-      "description": "",
       "location": "San Bruno, CA",
       "position": "Fullstack Engineer",
       "start": "6-19-2017",
@@ -28,7 +26,6 @@
     },
     "cegsoft": {
       "name": "CEGsoft",
-      "description": "",
       "location": "Guaynabo, PR",
       "position": "Software Engineer - Intern",
       "start": "9-1-2016",
@@ -41,7 +38,6 @@
     },
     "usf_nsf_reu": {
       "name": "USF NSF REU",
-      "description": "",
       "location": "Tampa, FL",
       "position": "Research Intern",
       "start": "5-25-2016",
@@ -51,12 +47,24 @@
       "logo": "/images/nsf_logo.png",
       "icon": "microscope",
       "link": "http://reu.cse.usf.edu/index.html"
+    },
+    "acm_icpc": {
+      "name": "ACM ICPC",
+      "location": "Santo Domingo, DR",
+      "position": "Competitor",
+      "start": "8-20-2014",
+      "end": "10-13-2016",
+      "backgroundColor": "#0061cc",
+      "foregroundColor": "#ffffff",
+      "logo": "/images/icpc_logo.png",
+      "logoScale": 0.7,
+      "icon": "trophy-alt",
+      "link": "https://icpc.baylor.edu/"
     }
   },
   "projects": {
     "distractionagency": {
       "name": "The Distraction Agency",
-      "description": "TDA DESC",
       "start": "12-26-2018",
       "backgroundColor": "#000000",
       "foregroundColor": "#FFFFFF",
@@ -66,7 +74,6 @@
     },
     "clockio": {
       "name": "ClockIO",
-      "description": "",
       "start": "5-1-2018",
       "backgroundColor": "#0090FF",
       "foregroundColor": "#FFFFFF",
@@ -78,7 +85,6 @@
     },
     "simplefinanceapp": {
       "name": "SimpleFinance.App",
-      "description": "SFA DESC",
       "start": "9-1-2018",
       "backgroundColor": "#66bb6a",
       "foregroundColor": "#FFFFFF",
@@ -90,7 +96,6 @@
     },
     "gameoflife": {
       "name": "Game Of Life",
-      "description": "GOL DESC",
       "start": "6-1-2018",
       "backgroundColor": "#000000",
       "foregroundColor": "#FFFFFF",
@@ -102,7 +107,6 @@
     },
     "makeameal": {
       "name": "Make-A-Meal",
-      "description": "",
       "start": "10-1-2017",
       "backgroundColor": "#282828",
       "foregroundColor": "#6DC25B",
@@ -113,7 +117,6 @@
     },
     "homelab": {
       "name": "Homelab",
-      "description": "",
       "start": "12-1-2016",
       "backgroundColor": "#000000",
       "foregroundColor": "#ffffff",
@@ -123,7 +126,6 @@
     },
     "poseidon": {
       "name": "Poseidon Bot",
-      "description": "TPB DESC",
       "start": "12-21-2016",
       "backgroundColor": "#000000",
       "foregroundColor": "#FFFFFF",
@@ -136,7 +138,6 @@
   "skills": {
     "javascript": {
       "name": "JavaScript",
-      "description": "",
       "start": "9-1-2016",
       "backgroundColor": "#ffe558",
       "foregroundColor": "#000000",
@@ -147,7 +148,6 @@
     },
     "python": {
       "name": "Python",
-      "description": "",
       "start": "6-19-2017",
       "backgroundColor": "#2B5B84",
       "foregroundColor": "#ffffff",
@@ -159,7 +159,6 @@
     },
     "flask": {
       "name": "Flask",
-      "description": "",
       "start": "9-24-2018",
       "backgroundColor": "#000000",
       "foregroundColor": "#ffffff",
@@ -171,7 +170,6 @@
     },
     "django": {
       "name": "Django",
-      "description": "",
       "start": "6-19-2017",
       "backgroundColor": "#0C3C26",
       "foregroundColor": "#ffffff",
@@ -183,7 +181,6 @@
     },
     "csharp": {
       "name": "Visual C#",
-      "description": "",
       "start": "9-1-2016",
       "backgroundColor": "#512bd4",
       "foregroundColor": "#ffffff",
@@ -195,7 +192,6 @@
     },
     "java": {
       "name": "Java",
-      "description": "",
       "start": "6-1-2014",
       "backgroundColor": "#f80000",
       "foregroundColor": "#ffffff",
@@ -206,7 +202,6 @@
     },
     "typescript": {
       "name": "TypeScript",
-      "description": "",
       "start": "10-1-2016",
       "backgroundColor": "#265988",
       "foregroundColor": "#ffffff",
@@ -217,7 +212,6 @@
     },
     "react": {
       "name": "React",
-      "description": "",
       "start": "5-1-2017",
       "backgroundColor": "#20232a",
       "foregroundColor": "#61dafb",
@@ -229,7 +223,6 @@
     },
     "nginx": {
       "name": "NGiNX",
-      "description": "",
       "start": "8-1-2017",
       "backgroundColor": "#20232a",
       "foregroundColor": "#009639",
@@ -241,7 +234,6 @@
     },
     "graphql": {
       "name": "GraphQL",
-      "description": "",
       "start": "10-1-2017",
       "backgroundColor": "#3d464f",
       "foregroundColor": "#E10098",
@@ -253,7 +245,6 @@
     },
     "redux": {
       "name": "Redux",
-      "description": "",
       "start": "6-1-2017",
       "backgroundColor": "#744cbc",
       "foregroundColor": "#ffffff",
@@ -265,7 +256,6 @@
     },
     "nodejs": {
       "name": "node.js",
-      "description": "",
       "start": "9-1-2016",
       "backgroundColor": "#303030",
       "foregroundColor": "#169e1f",
@@ -277,19 +267,17 @@
     },
     "expressjs": {
       "name": "Express",
-      "description": "",
       "start": "9-1-2016",
       "backgroundColor": "#e0e0e0",
       "foregroundColor": "#000000",
       "icon": "node-js",
-      "proficiency": 2,
+      "proficiency": 3,
       "logo": "/images/nodejs_logo.png",
       "logoScale": 0.8,
       "link": "https://expressjs.com/"
     },
     "angularjs": {
       "name": "Angular",
-      "description": "",
       "start": "9-1-2016",
       "backgroundColor": "#ff0000",
       "foregroundColor": "#ffffff",
@@ -300,7 +288,6 @@
     },
     "go": {
       "name": "Go",
-      "description": "",
       "start": "4-1-2017",
       "backgroundColor": "#E0EBF5",
       "foregroundColor": "#000000",
@@ -311,31 +298,28 @@
     },
     "postgresql": {
       "name": "PostgreSQL",
-      "description": "",
       "start": "6-1-2017",
       "backgroundColor": "#336791",
       "foregroundColor": "#ffffff",
       "icon": "postgresql",
-      "proficiency": 1,
+      "proficiency": 2,
       "logo": "/images/postgresql_logo.png",
       "logoScale": 1.8,
       "link": "https://www.postgresql.org/"
     },
     "redis": {
       "name": "Redis",
-      "description": "",
       "start": "7-1-2018",
       "backgroundColor": "#222222",
       "foregroundColor": "#ff4444",
       "icon": "redis",
-      "proficiency": 1,
+      "proficiency": 2,
       "logo": "/images/redis_logo.png",
       "logoScale": 1.5,
       "link": "https://redis.io/"
     },
     "docker": {
       "name": "Docker",
-      "description": "",
       "start": "4-1-2017",
       "backgroundColor": "#007bff",
       "foregroundColor": "#ffffff",
@@ -346,7 +330,6 @@
     },
     "webpack": {
       "name": "Webpack",
-      "description": "",
       "start": "11-1-2018",
       "backgroundColor": "#8dd6f9",
       "foregroundColor": "#ffffff",
@@ -357,7 +340,6 @@
     },
     "digitalocean": {
       "name": "Digital Ocean",
-      "description": "",
       "start": "5-1-2018",
       "backgroundColor": "#0069ff",
       "foregroundColor": "#ffffff",
@@ -369,7 +351,6 @@
     },
     "linux": {
       "name": "Linux",
-      "description": "",
       "start": "11-1-2012",
       "backgroundColor": "#000000",
       "foregroundColor": "#ffffff",
@@ -381,7 +362,6 @@
     },
     "prisma": {
       "name": "Prisma",
-      "description": "",
       "start": "12-27-2018",
       "backgroundColor": "#0C344A",
       "foregroundColor": "#ffffff",
@@ -390,6 +370,39 @@
       "logo": "/images/prisma_logo.png",
       "logoScale": 1,
       "link": "https://www.prisma.io/"
+    },
+    "cpp": {
+      "name": "C++",
+      "start": "8-20-2014",
+      "backgroundColor": "#252525",
+      "foregroundColor": "#ffffff",
+      "icon": "code",
+      "proficiency": 1,
+      "logo": "/images/cpp_logo.png",
+      "logoScale": 0.7,
+      "link": "http://www.cplusplus.com/"
+    },
+    "clang": {
+      "name": "C",
+      "start": "8-20-2014",
+      "backgroundColor": "#252525",
+      "foregroundColor": "#ffffff",
+      "icon": "blind",
+      "proficiency": 1,
+      "logo": "/images/c_logo.png",
+      "logoScale": 0.9,
+      "link": "https://en.wikipedia.org/wiki/C_(programming_language)"
+    },
+    "git": {
+      "name": "Git",
+      "start": "8-21-2015",
+      "backgroundColor": "#f14e32",
+      "foregroundColor": "#000000",
+      "icon": "git-square",
+      "proficiency": 3,
+      "logo": "/images/git_logo.png",
+      "logoScale": 0.9,
+      "link": "https://git-scm.com/"
     }
   },
   "experienceSkills": [
@@ -418,6 +431,10 @@
 
     ["usf_nsf_reu", "java"],
     ["usf_nsf_reu", "linux"],
+
+    ["acm_icpc", "java"],
+    ["acm_icpc", "cpp"],
+    ["acm_icpc", "clang"],
 
     ["", ""]
   ],

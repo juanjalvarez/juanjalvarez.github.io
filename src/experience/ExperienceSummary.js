@@ -71,7 +71,8 @@ const ExperienceSummary = props => {
     logo,
     link,
     plain,
-    showLink
+    showLink,
+    logoScale,
   } = props
   const startDate = moment(start, 'M-D-YYYY')
   const endDate = end === 'now' ? moment() : moment(end, 'M-D-YYYY')
@@ -83,7 +84,7 @@ const ExperienceSummary = props => {
   const endString = end === 'now' ? 'Now' : endDate.format('MMM Do, YYYY')
   return (
     <div className={[classes.container, className, plain ? classes.plain : ''].join(' ')}>
-      <CircularImage src={logo} size={100} />
+      <CircularImage src={logo} size={100} scale={logoScale} />
       <div className={classes.info}>
         <div className={classes.company}>
           {name}
@@ -127,7 +128,8 @@ ExperienceSummary.propTypes ={
   plain: PropTypes.bool,
   link: PropTypes.string,
   showLink: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
+  logoScale: PropTypes.number,
 }
 
 export default injectSheet(styles)(ExperienceSummary)

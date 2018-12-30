@@ -136,13 +136,6 @@ const SkillModal = props => {
           </div>
         </div>
       </div>
-      {
-        skill.description.length > 0 && (
-          <div className={classes.description}>
-            {skill.description}
-          </div>
-        )
-      }
       <br />
       <h3>Relevant Projects & Experiences</h3>
       <div className={classes.tagContainer}>
