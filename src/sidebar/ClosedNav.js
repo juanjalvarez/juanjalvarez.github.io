@@ -7,8 +7,8 @@ import ProfilePicture from './ProfilePicture'
 
 const position = {
   mobile: {
-    top: 5,//0,
-    right: 5//-40,
+    top: 5,
+    right: 5,
   },
   desktop: {
     top: 60,
