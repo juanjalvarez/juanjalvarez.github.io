@@ -52,7 +52,7 @@ class ExperienceModal extends Component {
     const response = await fetch(`/markdown/${experienceId}.md`)
     const source = await response.text()
     let processedSource = ''
-    if (!source.startsWith('<!DOCTYPE')) {
+    if (!source.toUpperCase().startsWith('<!DOCTYPE')) {
       processedSource = source
     }
     this.setState({
