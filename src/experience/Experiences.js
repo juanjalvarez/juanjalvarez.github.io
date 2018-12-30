@@ -85,6 +85,7 @@ class Experiences extends PureComponent {
               )
             })
           }
+          <Spacing height={150} />
         </div>
       </div>
     )

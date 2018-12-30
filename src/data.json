@@ -54,6 +54,16 @@
     }
   },
   "projects": {
+    "distractionagency": {
+      "name": "The Distraction Agency",
+      "description": "TDA DESC",
+      "start": "12-26-2018",
+      "backgroundColor": "#000000",
+      "foregroundColor": "#FFFFFF",
+      "logo": "/images/distraction_agency_logo.png",
+      "logoScale": 1,
+      "icon": "sun"
+    },
     "clockio": {
       "name": "ClockIO",
       "description": "",
@@ -201,7 +211,7 @@
       "backgroundColor": "#265988",
       "foregroundColor": "#ffffff",
       "icon": "ts",
-      "proficiency": 2,
+      "proficiency": 3,
       "logo": "/images/typescript_logo.png",
       "link": "https://www.typescriptlang.org/"
     },
@@ -368,17 +378,21 @@
       "logo": "/images/linux_logo.png",
       "logoScale": 0.7,
       "link": "https://www.linuxfoundation.org/"
+    },
+    "prisma": {
+      "name": "Prisma",
+      "description": "",
+      "start": "12-27-2018",
+      "backgroundColor": "#0C344A",
+      "foregroundColor": "#ffffff",
+      "icon": "triangle",
+      "proficiency": 2,
+      "logo": "/images/prisma_logo.png",
+      "logoScale": 1,
+      "link": "https://www.prisma.io/"
     }
   },
   "experienceSkills": [
-    ["carelinx", "javascript"],
-    ["carelinx", "react"],
-    ["carelinx", "python"],
-    ["carelinx", "django"],
-    ["carelinx", "nginx"],
-    ["carelinx", "redux"],
-    ["carelinx", "postgresql"],
-
     ["pinterest", "javascript"],
     ["pinterest", "react"],
     ["pinterest", "python"],
@@ -388,6 +402,15 @@
     ["pinterest", "docker"],
     ["pinterest", "webpack"],
     ["pinterest", "linux"],
+
+    ["carelinx", "javascript"],
+    ["carelinx", "react"],
+    ["carelinx", "python"],
+    ["carelinx", "django"],
+    ["carelinx", "nginx"],
+    ["carelinx", "redux"],
+    ["carelinx", "postgresql"],
+    ["carelinx", "webpack"],
 
     ["cegsoft", "javascript"],
     ["cegsoft", "angularjs"],
@@ -399,6 +422,17 @@
     ["", ""]
   ],
   "projectSkills": [
+    ["distractionagency", "typescript"],
+    ["distractionagency", "nodejs"],
+    ["distractionagency", "react"],
+    ["distractionagency", "expressjs"],
+    ["distractionagency", "prisma"],
+    ["distractionagency", "postgresql"],
+    ["distractionagency", "webpack"],
+    ["distractionagency", "docker"],
+    ["distractionagency", "graphql"],
+    ["distractionagency", "redux"],
+
     ["makeameal", "typescript"],
     ["makeameal", "javascript"],
     ["makeameal", "react"],

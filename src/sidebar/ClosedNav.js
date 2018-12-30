@@ -58,7 +58,7 @@ const styles = {
       right: (window.innerWidth / 2) - 60
     },
     '100%': {
-      top: window.innerWidth < 501 ? position.mobile.top : position.desktop.right,
+      top: window.innerWidth < 501 ? position.mobile.top : position.desktop.top,
       right: window.innerWidth < 501 ? position.mobile.right : position.desktop.right,
     }
   },

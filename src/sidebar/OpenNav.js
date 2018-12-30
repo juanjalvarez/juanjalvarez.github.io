@@ -173,7 +173,7 @@ class OpenNav extends PureComponent {
             </a>
           </div>
         </div>
-        <Icon className={classes.options} name="cog" size={50} />
+        {/* <Icon className={classes.options} name="cog" size={50} /> */}
       </div>
     )
   }

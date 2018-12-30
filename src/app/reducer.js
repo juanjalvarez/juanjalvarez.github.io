@@ -29,6 +29,12 @@ export default (state = initialState, action) => {
         isNavOpen,
       }
     }
+    case constants.DISABLE_INITIAL_ANIMATION: {
+      return {
+        ...state,
+        shouldRenderInitialAnimation: false,
+      }
+    }
     default: {
       return state
     }

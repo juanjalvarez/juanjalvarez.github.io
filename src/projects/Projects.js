@@ -39,7 +39,7 @@ const styles = {
       transform: 'scale(1.05)'
     }
   },
-  githubLink: {
+  externalProjectsLink: {
     marginBottom: 20,
     textAlign: 'center',
   },
@@ -63,7 +63,21 @@ class Projects extends PureComponent {
         <Route path="/projects/:projectId" component={ProjectModal} />
         <div className={classes.body}>
           <Spacing with="100%" height={window.innerWidth < 501 ? 120 : '5%'} />
-          <IconButton className={classes.githubLink} icon="github" onClick={() => window.open(data.links.github)}>View GitHub Profile</IconButton>
+          <IconButton
+            className={classes.externalProjectsLink}
+            icon="github"
+            onClick={() => window.open(data.links.github)}
+          >
+            View GitHub Profile
+          </IconButton>
+          <IconButton
+            className={classes.externalProjectsLink}
+            icon="gitlab"
+            onClick={() => window.open(data.links.gitlab)}
+            background="#e65328"
+          >
+            View GitLab Profile
+          </IconButton>
           {
             Object.keys(projects).map(key => {
               const project = projects[key]
@@ -78,6 +92,7 @@ class Projects extends PureComponent {
               )
             })
           }
+          <Spacing height={150} />
         </div>
       </div>
     )

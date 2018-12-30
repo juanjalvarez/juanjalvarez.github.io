@@ -14,3 +14,7 @@ export const setIsNavOpen = isNavOpen => ({
   type: constants.SET_IS_NAV_OPEN,
   isNavOpen,
 })
+
+export const disableInitialAnimation = () => ({
+  type: constants.DISABLE_INITIAL_ANIMATION,
+})

@@ -4,12 +4,14 @@ import { ThemeProvider } from 'react-jss'
 import { createStore, combineReducers, compose } from 'redux'
 import { Provider } from 'react-redux'
 import { createBrowserHistory } from 'history'
+import moment from 'moment'
 
 import Layout from './Layout'
 
 import rootReducer from '../reducer'
 import theme from '../theme'
 import analytics from '../utils/analytics'
+import * as actions from './actions'
 import './app.css'
 
 const analyticsEnabled = Boolean(process.env['REACT_APP_ANALYTICS_ENABLED'])
@@ -35,6 +37,11 @@ if (reduxDevTools) {
 const combinedReducers = combineReducers(rootReducer)
 
 const store = createStore(combinedReducers, {}, compose(...enhancers))
+
+setTimeout(() => {
+  localStorage.setItem('lastAccessed', moment().format('YYYY-MM-DD'))
+  store.dispatch(actions.disableInitialAnimation())
+}, 3500)
 
 class App extends PureComponent {
 

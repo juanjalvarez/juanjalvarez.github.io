@@ -22,3 +22,5 @@ yarn-debug.log*
 yarn-error.log*
 *.lock
 .jest-test-results.json
+
+public_raw

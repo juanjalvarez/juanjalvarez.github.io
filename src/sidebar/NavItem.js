@@ -45,7 +45,7 @@ class NavItem extends PureComponent {
       children,
     } = this.props
     return (
-      <a onClick={this.handleClick} className={[classes.container, className].join(' ')}>{children}</a>
+      <a href="" onClick={this.handleClick} className={[classes.container, className].join(' ')}>{children}</a>
     )
   }
 }
