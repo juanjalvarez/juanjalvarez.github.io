@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import IconButton from '../components/IconButton'
 import Spacing from '../components/Spacing'
+
+import * as appActions from '../app/actions'
 
 const styles = {
   container: {
@@ -58,6 +62,8 @@ class About extends Component {
     history: PropTypes.object.isRequired,
   }
 
+  componentDidMount = () => this.props.setActivePage('About')
+
   handleLinkClick = link => {
     const {
       history,
@@ -105,4 +111,8 @@ class About extends Component {
   }
 }
 
-export default injectSheet(styles)(About)
+const mapDispatchToProps = dispatch => bindActionCreators(appActions, dispatch)
+
+export default connect(null, mapDispatchToProps)(
+  injectSheet(styles)(About)
+)
