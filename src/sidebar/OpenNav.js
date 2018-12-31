@@ -147,8 +147,6 @@ class OpenNav extends PureComponent {
             </a>
             <a
               className={classes.navIconLink}
-              target="_blank"
-              rel="noopener noreferrer"
               href={`mailto:${data.links.email}`}
             >
               <Icon name="envelope" size={50} />

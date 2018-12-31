@@ -15,6 +15,7 @@ import './app.css'
 
 const history = createBrowserHistory()
 history.listen(analytics)
+history.listen(() => window.scrollTo())
 
 const enhancers = []
 const reduxDevTools = window['__REDUX_DEVTOOLS_EXTENSION__']
