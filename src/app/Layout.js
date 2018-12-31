@@ -43,8 +43,6 @@ class Layout extends Component {
   }
 
   componentDidUpdate = prevProps => {
-    console.log(this.props)
-    console.log(prevProps)
     if (this.props.activePage !== prevProps.activePage) {
       document.getElementById('layout').scrollTo({
         top: 0,
