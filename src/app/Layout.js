@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 import { Switch, Route, Redirect } from 'react-router-dom'
@@ -16,11 +16,10 @@ const styles = theme => ({
     backgroundColor: theme.backgroundColor,
     width: '100%',
     height: '100%',
-    overflowY: 'scroll'
+    overflowY: 'scroll',
   },
   children: {
     animation: props => props.shouldRenderInitialAnimation ? 'fadein-quick 3s forwards' : '',
-    height: '100%'
   },
   '@keyframes fadein-quick': {
     '0%': {
@@ -35,30 +34,50 @@ const styles = theme => ({
   }
 })
 
-const Layout = ({
-  classes
-}) => (
-  <div className={classes.container}>
-    <Nav />
-    <Blur className={classes.children}>
-      <Switch>
-        <Route exact path="/" render={() => <Redirect to="/about" />} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/experience" component={Experiences} />
-        <Route path="/skills" component={Skills} />
-        <Route path="/about" component={About} />
-      </Switch>
-    </Blur>
-  </div>
-)
+class Layout extends Component {
 
-Layout.propTypes = {
-  children: PropTypes.element,
-  classes: PropTypes.object.isRequired
+  static propTypes = {
+    children: PropTypes.element,
+    classes: PropTypes.object.isRequired,
+    activePage: PropTypes.string,
+  }
+
+  componentDidUpdate = prevProps => {
+    console.log(this.props)
+    console.log(prevProps)
+    if (this.props.activePage !== prevProps.activePage) {
+      document.getElementById('layout').scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'auto',
+      })
+    }
+  }
+
+  render() {
+    const {
+      classes,
+    } = this.props
+    return (
+      <div id="layout" className={classes.container}>
+        <Nav />
+        <Blur className={classes.children}>
+          <Switch>
+            <Route exact path="/" render={() => <Redirect to="/about" />} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/experience" component={Experiences} />
+            <Route path="/skills" component={Skills} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </Blur>
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = state => ({
-  shouldRenderInitialAnimation: state.app.shouldRenderInitialAnimation
+  shouldRenderInitialAnimation: state.app.shouldRenderInitialAnimation,
+  activePage: state.app.activePage,
 })
 
 export default connect(mapStateToProps)(

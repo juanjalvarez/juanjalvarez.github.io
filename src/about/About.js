@@ -60,6 +60,7 @@ class About extends Component {
   static propTypes = {
     classes: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired,
+    setActivePage: PropTypes.func.isRequired,
   }
 
   componentDidMount = () => this.props.setActivePage('About')
